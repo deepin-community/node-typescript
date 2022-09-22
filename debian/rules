@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	rm -f debian/node-typescript/usr/share/nodejs/typescript/.gitattributes
+	rm -f debian/node-typescript/usr/share/nodejs/typescript/lib/.gitattributes
+	rm -f debian/node-typescript/usr/share/nodejs/typescript/lib/README.md

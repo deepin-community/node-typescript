@@ -1,0 +1,10 @@
+# Tests do contain strange code, but it still is code
+node-typescript source: source-is-missing tests/baselines/reference/*js
+
+# They contain unicode identifier data, replicated in each one
+node-typescript source: source-is-missing lib/tsc.js
+node-typescript source: source-is-missing lib/tsserver.js
+node-typescript source: source-is-missing lib/tsserverlibrary.js
+node-typescript source: source-is-missing lib/typescript.js
+node-typescript source: source-is-missing lib/typescriptServices.js
+node-typescript source: source-is-missing lib/typingsInstaller.js

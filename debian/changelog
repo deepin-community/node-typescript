@@ -1,0 +1,469 @@
+node-typescript (4.4.4+ds1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 18 Oct 2021 09:02:09 +0200
+
+node-typescript (4.4.3+ds1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update lintian overrides.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 13 Sep 2021 08:46:08 +0200
+
+node-typescript (4.4.2+ds1-2) unstable; urgency=medium
+
+  * Re-upload to unstable.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 30 Aug 2021 13:13:38 +0200
+
+node-typescript (4.4.2+ds1-1) experimental; urgency=medium
+
+  * Fix d/watch.
+  * Bump standards-version to 4.6.0.
+  * Repack next sources: we don't want the .github directory!
+  * New upstream release.
+  * Mark the require autopkgtest as superficial.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 29 Aug 2021 18:19:49 +0200
+
+node-typescript (4.2.3-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 12 Mar 2021 13:17:08 +0100
+
+node-typescript (4.2.2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Drop suggestion of node-typescript-types (Closes: #979771).
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 04 Mar 2021 08:43:01 +0100
+
+node-typescript (4.1.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 19 Dec 2020 12:47:48 +0100
+
+node-typescript (4.1.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-vers to 4.5.1.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 23 Nov 2020 07:52:32 +0100
+
+node-typescript (4.0.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 30 Oct 2020 06:01:23 +0100
+
+node-typescript (4.0.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 21 Sep 2020 14:32:29 +0200
+
+node-typescript (4.0.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 22 Aug 2020 20:20:05 +0200
+
+node-typescript (3.9.7-1) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Julien Puydt ]
+  * New upstream release.
+  * Declare d/rules doesn't require root.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 20 Jul 2020 10:08:07 +0200
+
+node-typescript (3.9.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump dh compat to 13.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 11 Jul 2020 10:29:57 +0200
+
+node-typescript (3.9.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 06 Jun 2020 17:00:17 +0200
+
+node-typescript (3.9.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 25 May 2020 07:39:02 +0200
+
+node-typescript (3.9.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 16 May 2020 12:48:15 +0200
+
+node-typescript (3.8.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 03 Mar 2020 09:19:26 +0100
+
+node-typescript (3.8.2-2) unstable; urgency=medium
+
+  * Fix lintian problems.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 24 Feb 2020 18:15:02 +0100
+
+node-typescript (3.8.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-vers to 4.5.0.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 24 Feb 2020 17:19:19 +0100
+
+node-typescript (3.7.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 19 Jan 2020 11:21:21 +0100
+
+node-typescript (3.7.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 05 Jan 2020 09:33:43 +0100
+
+node-typescript (3.7.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 09 Dec 2019 20:52:30 +0100
+
+node-typescript (3.7.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 09 Nov 2019 10:26:48 +0100
+
+node-typescript (3.6.4-2) unstable; urgency=medium
+
+  * Don't provide the tslib link (Closes: #943526)
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 04 Nov 2019 08:47:57 +0100
+
+node-typescript (3.6.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-vers to 4.4.1.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 15 Oct 2019 08:12:52 +0200
+
+node-typescript (3.6.3-4) unstable; urgency=medium
+
+  * Team upload
+  * Add a basic autopkgtest (which will prevent testing migration in case of
+    breakages like #941575)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 04 Oct 2019 13:55:21 +0530
+
+node-typescript (3.6.3-3) unstable; urgency=medium
+
+  * Drop bad patch (Closes: #941575).
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 04 Oct 2019 08:44:08 +0200
+
+node-typescript (3.6.3-2) unstable; urgency=medium
+
+  * Team upload
+  * Use /usr/share/nodejs as @types system directory
+  * Thus breaks with older node-typescript-types
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 30 Sep 2019 16:56:06 +0200
+
+node-typescript (3.6.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update overrides.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 14 Sep 2019 15:35:45 +0200
+
+node-typescript (3.6.2-1) unstable; urgency=medium
+
+  * Move tslib to /usr/share (Closes: #933077).
+  * New upstream release.
+  * Move everything to /usr/share according to new policy.
+  * Update overrides
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 31 Aug 2019 19:03:10 +0200
+
+node-typescript (3.5.3-2) unstable; urgency=medium
+
+  * Correct d/copyright (following upstream #11469).
+  * Bump dh compat to 12, dropping d/compat.
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 25 Jul 2019 08:57:05 +0200
+
+node-typescript (3.5.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 11 Jul 2019 09:09:12 +0200
+
+node-typescript (3.5.2-2) unstable; urgency=medium
+
+  * Drop broken patch.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 09 Jul 2019 19:05:32 +0200
+
+node-typescript (3.5.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add patch to find system-installed libs (Closes: #930268).
+  * Bump std-ver to 4.4.0.
+  * Update lintian overrides for the tests.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 08 Jul 2019 12:00:58 +0200
+
+node-typescript (3.4.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 28 Apr 2019 21:04:58 +0200
+
+node-typescript (3.4.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 16 Apr 2019 12:20:42 +0200
+
+node-typescript (3.3.3333-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 22 Feb 2019 13:17:57 +0100
+
+node-typescript (3.3.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 01 Feb 2019 22:52:25 +0100
+
+node-typescript (3.2.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Mark the package Multi-Arch: foreign following hinter.
+  * Bump std-ver to 4.3.0.
+
+ -- Julien Puydt <jpuydt@debian.org>  Wed, 23 Jan 2019 16:27:44 +0100
+
+node-typescript (3.2.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 08 Dec 2018 09:43:09 +0100
+
+node-typescript (3.2.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 30 Nov 2018 07:27:37 +0100
+
+node-typescript (3.1.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 02 Nov 2018 08:47:17 +0100
+
+node-typescript (3.1.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Wed, 17 Oct 2018 07:04:03 +0200
+
+node-typescript (3.1.2-2) unstable; urgency=medium
+
+  * Add symlink so the package provides the tslib node package.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 14 Oct 2018 08:36:10 +0200
+
+node-typescript (3.1.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 11 Oct 2018 11:17:21 +0200
+
+node-typescript (3.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 29 Sep 2018 09:30:00 +0200
+
+node-typescript (3.0.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 01 Sep 2018 07:32:50 +0200
+
+node-typescript (3.0.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 29 Jul 2018 09:26:54 +0200
+
+node-typescript (2.9.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 21 Jun 2018 00:31:41 +0200
+
+node-typescript (2.9.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 09 Jun 2018 08:10:04 +0200
+
+node-typescript (2.9.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 17 May 2018 08:58:58 +0200
+
+node-typescript (2.8.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 27 Apr 2018 16:24:59 +0200
+
+node-typescript (2.8.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump dh compat to 11.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 16 Mar 2018 08:17:36 +0100
+
+node-typescript (2.7.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 16 Feb 2018 21:07:00 +0100
+
+node-typescript (2.7.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 07 Feb 2018 21:24:52 +0100
+
+node-typescript (2.7.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 21 Jan 2018 15:27:51 +0100
+
+node-typescript (2.6.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 26 Nov 2017 09:37:29 +0100
+
+node-typescript (2.6.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 01 Nov 2017 10:08:34 +0100
+
+node-typescript (2.6.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Thu, 19 Oct 2017 23:17:50 +0200
+
+node-typescript (2.5.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-ver to 4.1.1.
+  * Put in section javascript.
+  * Drop the patch to use node as nodejs.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 01 Oct 2017 09:25:50 +0200
+
+node-typescript (2.5.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-ver to 4.1.0.
+  * Bump d/watch to version 4.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 23 Aug 2017 10:23:10 +0200
+
+node-typescript (2.4.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 06 Aug 2017 09:04:19 +0200
+
+node-typescript (2.4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Push standards-version to 4.0.0.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sat, 01 Jul 2017 13:29:12 +0200
+
+node-typescript (2.3.2really2.1.6-1) unstable; urgency=medium
+
+  * Revert to 2.1.6 so ycmd can get to testing and stable, sorry for the
+  inconvenience...
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sat, 13 May 2017 14:34:50 +0200
+
+node-typescript (2.3.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Tue, 02 May 2017 09:21:27 +0200
+
+node-typescript (2.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 23 Apr 2017 10:41:40 +0200
+
+node-typescript (2.1.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Tue, 14 Feb 2017 07:21:19 +0100
+
+node-typescript (2.1.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 15 Jan 2017 16:34:30 +0100
+
+node-typescript (2.1.4-1) unstable; urgency=medium
+
+  * Nex upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Mon, 19 Dec 2016 21:29:27 +0100
+
+node-typescript (2.0.8-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Tue, 08 Nov 2016 15:47:39 +0100
+
+node-typescript (2.0.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Thu, 27 Oct 2016 21:13:55 +0200
+
+node-typescript (2.0.5-1) unstable; urgency=low
+
+  * Initial release (Closes: #839895)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 07 Oct 2016 17:10:24 +0200

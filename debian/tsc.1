@@ -1,0 +1,144 @@
+.TH TSC "1" "October 2016" "TypeScript compiler" "User Commands"
+.SH NAME
+tsc \- TypeScript compiler
+.SH SYNOPSIS
+\fBtsc\fR \fB\-\-outFile\fR file.js file.ts
+
+\fBtsc\fR @args.txt
+.SH OPTIONS
+.TP
+\fB\-\-allowJs\fR
+Allow javascript files to be compiled.
+.TP
+\fB\-\-allowSyntheticDefaultImports\fR
+Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+.TP
+\fB\-\-allowUnreachableCode\fR
+Do not report errors on unreachable code.
+.TP
+\fB\-\-allowUnusedLabels\fR
+Do not report errors on unused labels.
+.TP
+\fB\-\-baseUrl\fR
+Base directory to resolve non\-absolute module names.
+.TP
+\fB\-d\fR, \fB\-\-declaration\fR
+Generates corresponding '.d.ts' file.
+.TP
+\fB\-\-experimentalDecorators\fR
+Enables experimental support for ES7 decorators.
+.TP
+\fB\-\-forceConsistentCasingInFileNames\fR
+Disallow inconsistently\-cased references to the same file.
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Print this message.
+.TP
+\fB\-\-init\fR
+Initializes a TypeScript project and creates a tsconfig.json file.
+.TP
+\fB\-\-jsx\fR KIND
+Specify JSX code generation: 'preserve' or 'react'
+.TP
+\fB\-\-lib\fR
+Specify library files to be included in the compilation:
+\&'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'dom' 'webworker' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory'
+.TP
+\fB\-\-mapRoot\fR LOCATION
+Specify the location where debugger should locate map files instead of generated locations.
+.TP
+\fB\-\-maxNodeModuleJsDepth\fR
+The maximum dependency depth to search under node_modules and load JavaScript files
+.TP
+\fB\-m\fR KIND, \fB\-\-module\fR KIND
+Specify module code generation: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+.TP
+\fB\-\-moduleResolution\fR
+Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre\-1.6).
+.TP
+\fB\-\-newLine\fR NEWLINE
+Specify the end of line sequence to be used when emitting files: 'CRLF' (dos) or 'LF' (unix).
+.TP
+\fB\-\-noEmit\fR
+Do not emit outputs.
+.TP
+\fB\-\-noEmitOnError\fR
+Do not emit outputs if any errors were reported.
+.TP
+\fB\-\-noFallthroughCasesInSwitch\fR
+Report errors for fallthrough cases in switch statement.
+.TP
+\fB\-\-noImplicitAny\fR
+Raise error on expressions and declarations with an implied 'any' type.
+.TP
+\fB\-\-noImplicitReturns\fR
+Report error when not all code paths in function return a value.
+.TP
+\fB\-\-noImplicitThis\fR
+Raise error on 'this' expressions with an implied 'any' type.
+.TP
+\fB\-\-noImplicitUseStrict\fR
+Do not emit 'use strict' directives in module output.
+.TP
+\fB\-\-noUnusedLocals\fR
+Report errors on unused locals.
+.TP
+\fB\-\-noUnusedParameters\fR
+Report errors on unused parameters.
+.TP
+\fB\-\-outDir\fR DIRECTORY
+Redirect output structure to the directory.
+.TP
+\fB\-\-outFile\fR FILE
+Concatenate and emit output to single file.
+.TP
+\fB\-\-preserveConstEnums\fR
+Do not erase const enum declarations in generated code.
+.TP
+\fB\-\-pretty\fR
+Stylize errors and messages using color and context. (experimental)
+.TP
+\fB\-p\fR DIRECTORY, \fB\-\-project\fR DIRECTORY
+Compile the project in the given directory.
+.TP
+\fB\-\-reactNamespace\fR
+Specify the object invoked for createElement and __spread when targeting 'react' JSX emit
+.TP
+\fB\-\-removeComments\fR
+Do not emit comments to output.
+.TP
+\fB\-\-rootDir\fR LOCATION
+Specify the root directory of input files. Use to control the output directory structure with \fB\-\-outDir\fR.
+.TP
+\fB\-\-skipLibCheck\fR
+Skip type checking of declaration files.
+.TP
+\fB\-\-sourceMap\fR
+Generates corresponding '.map' file.
+.TP
+\fB\-\-sourceRoot\fR LOCATION
+Specify the location where debugger should locate TypeScript files instead of source locations.
+.TP
+\fB\-\-strictNullChecks\fR
+Enable strict null checks.
+.TP
+\fB\-\-suppressImplicitAnyIndexErrors\fR
+Suppress noImplicitAny errors for indexing objects lacking index signatures.
+.TP
+\fB\-t\fR VERSION, \fB\-\-target\fR VERSION
+Specify ECMAScript target version: 'ES3' (default), 'ES5', or 'ES2015'
+.TP
+\fB\-\-traceResolution\fR
+Enable tracing of the name resolution process.
+.TP
+\fB\-\-types\fR
+Type declaration files to be included in compilation.
+.TP
+\fB\-v\fR, \fB\-\-version\fR
+Print the compiler's version.
+.TP
+\fB\-w\fR, \fB\-\-watch\fR
+Watch input files.
+.TP
+@<file>
+Insert command line options and files from a file.

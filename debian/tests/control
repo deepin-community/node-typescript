@@ -1,0 +1,6 @@
+Tests: require
+Restrictions: superficial
+Depends: @
+
+Test-Command: tsc debian/tests/greeter.ts
+Depends: @

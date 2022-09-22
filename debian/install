@@ -1,0 +1,3 @@
+package.json usr/share/nodejs/typescript/
+bin/tsc usr/share/nodejs/typescript/bin/
+lib usr/share/nodejs/typescript/
