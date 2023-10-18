@@ -214,20 +214,29 @@ task("watch-services").flags = {
     "   --built": "Compile using the built version of the compiler."
 };
 
-const buildServer = () => buildProject("src/tsserver", cmdLineOptions);
+const buildDynamicImportCompat = () => buildProject("src/dynamicImportCompat", cmdLineOptions);
+task("dynamicImportCompat", buildDynamicImportCompat);
+
+const buildServerMain = () => buildProject("src/tsserver", cmdLineOptions);
+const buildServer = series(buildDynamicImportCompat, buildServerMain);
+buildServer.displayName = "buildServer";
 task("tsserver", series(preBuild, buildServer));
 task("tsserver").description = "Builds the language server";
 task("tsserver").flags = {
     "   --built": "Compile using the built version of the compiler."
 };
 
-const cleanServer = () => cleanProject("src/tsserver");
+const cleanDynamicImportCompat = () => cleanProject("src/dynamicImportCompat");
+const cleanServerMain = () => cleanProject("src/tsserver");
+const cleanServer = series(cleanDynamicImportCompat, cleanServerMain);
+cleanServer.displayName = "cleanServer";
 cleanTasks.push(cleanServer);
 task("clean-tsserver", cleanServer);
 task("clean-tsserver").description = "Cleans outputs for the language server";
 
+const watchDynamicImportCompat = () => watchProject("src/dynamicImportCompat", cmdLineOptions);
 const watchServer = () => watchProject("src/tsserver", cmdLineOptions);
-task("watch-tsserver", series(preBuild, parallel(watchLib, watchDiagnostics, watchServer)));
+task("watch-tsserver", series(preBuild, parallel(watchLib, watchDiagnostics, watchDynamicImportCompat, watchServer)));
 task("watch-tsserver").description = "Watch for changes and rebuild the language server only";
 task("watch-tsserver").flags = {
     "   --built": "Compile using the built version of the compiler."
@@ -437,10 +446,6 @@ task("watch-local").flags = {
     "   --built": "Compile using the built version of the compiler."
 };
 
-const generateCodeCoverage = () => exec("istanbul", ["cover", "node_modules/mocha/bin/_mocha", "--", "-R", "min", "-t", "" + cmdLineOptions.testTimeout, "built/local/run.js"]);
-task("generate-code-coverage", series(preBuild, buildTests, generateCodeCoverage));
-task("generate-code-coverage").description = "Generates code coverage data via istanbul";
-
 const preTest = parallel(buildTsc, buildTests, buildServices, buildLssl);
 preTest.displayName = "preTest";
 
@@ -510,21 +515,15 @@ task("baseline-accept").description = "Makes the most recent test results the ne
 task("baseline-accept-rwc", () => baselineAccept(localRwcBaseline, refRwcBaseline));
 task("baseline-accept-rwc").description = "Makes the most recent rwc test results the new baseline, overwriting the old baseline";
 
-const buildLoggedIO = async () => {
-    mkdirp.sync("built/local/temp");
-    await exec(process.execPath, ["lib/tsc", "--types", "--target", "es5", "--lib", "es5", "--outdir", "built/local/temp", "src/harness/loggedIO.ts"]);
-    fs.renameSync("built/local/temp/harness/loggedIO.js", "built/local/loggedIO.js");
-    await del("built/local/temp");
-};
-
-const cleanLoggedIO = () => del("built/local/temp/loggedIO.js");
+const buildLoggedIO = () => buildProject("src/loggedIO/tsconfig-tsc-instrumented.json");
+const cleanLoggedIO = () => del("built/local/loggedIO.js");
 cleanTasks.push(cleanLoggedIO);
 
 const buildInstrumenter = () => buildProject("src/instrumenter");
 const cleanInstrumenter = () => cleanProject("src/instrumenter");
 cleanTasks.push(cleanInstrumenter);
 
-const tscInstrumented = () => exec(process.execPath, ["built/local/instrumenter.js", "record", cmdLineOptions.tests || "iocapture", "built/local"]);
+const tscInstrumented = () => exec(process.execPath, ["built/local/instrumenter.js", "record", cmdLineOptions.tests || "iocapture", "built/local/tsc.js"]);
 task("tsc-instrumented", series(lkgPreBuild, parallel(localize, buildTsc, buildServer, buildServices, buildLssl, buildLoggedIO, buildInstrumenter), tscInstrumented));
 task("tsc-instrumented").description = "Builds an instrumented tsc.js";
 task("tsc-instrumented").flags = {
@@ -559,6 +558,7 @@ const produceLKG = async () => {
         "built/local/typescriptServices.js",
         "built/local/typescriptServices.d.ts",
         "built/local/tsserver.js",
+        "built/local/dynamicImportCompat.js",
         "built/local/typescript.js",
         "built/local/typescript.d.ts",
         "built/local/tsserverlibrary.js",

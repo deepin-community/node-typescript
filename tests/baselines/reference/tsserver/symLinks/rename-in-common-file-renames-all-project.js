@@ -31,12 +31,12 @@ Project '/users/username/projects/a/tsconfig.json' (Configured)
 
 
 	../../../../a/lib/lib.d.ts
-	  Default library
+	  Default library for target 'es3'
 	c/fc.ts
 	  Imported via "./c/fc" from file 'a.ts'
-	  Matched by include pattern '**/*' in 'tsconfig.json'
+	  Matched by default include pattern '**/*'
 	a.ts
-	  Matched by include pattern '**/*' in 'tsconfig.json'
+	  Matched by default include pattern '**/*'
 
 -----------------------------------------------
 Project '/users/username/projects/a/tsconfig.json' (Configured)
@@ -78,12 +78,12 @@ Project '/users/username/projects/b/tsconfig.json' (Configured)
 
 
 	../../../../a/lib/lib.d.ts
-	  Default library
+	  Default library for target 'es3'
 	c/fc.ts
 	  Imported via "./c/fc" from file 'b.ts'
-	  Matched by include pattern '**/*' in 'tsconfig.json'
+	  Matched by default include pattern '**/*'
 	b.ts
-	  Matched by include pattern '**/*' in 'tsconfig.json'
+	  Matched by default include pattern '**/*'
 
 -----------------------------------------------
 Project '/users/username/projects/a/tsconfig.json' (Configured)

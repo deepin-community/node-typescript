@@ -4,7 +4,7 @@ namespace ts {
     // Compound nodes
 
     export function createEmptyExports(factory: NodeFactory) {
-        return factory.createExportDeclaration(/*decorators*/ undefined, /*modifiers*/ undefined, /*isTypeOnly*/ false, factory.createNamedExports([]), /*moduleSpecifier*/ undefined);
+        return factory.createExportDeclaration(/*modifiers*/ undefined, /*isTypeOnly*/ false, factory.createNamedExports([]), /*moduleSpecifier*/ undefined);
     }
 
     export function createMemberAccessForPropertyName(factory: NodeFactory, target: Expression, memberName: PropertyName, location?: TextRange): MemberExpression {
@@ -197,7 +197,7 @@ namespace ts {
                         get: getAccessor && setTextRange(
                             setOriginalNode(
                                 factory.createFunctionExpression(
-                                    getAccessor.modifiers,
+                                    getModifiers(getAccessor),
                                     /*asteriskToken*/ undefined,
                                     /*name*/ undefined,
                                     /*typeParameters*/ undefined,
@@ -212,7 +212,7 @@ namespace ts {
                         set: setAccessor && setTextRange(
                             setOriginalNode(
                                 factory.createFunctionExpression(
-                                    setAccessor.modifiers,
+                                    getModifiers(setAccessor),
                                     /*asteriskToken*/ undefined,
                                     /*name*/ undefined,
                                     /*typeParameters*/ undefined,
@@ -267,7 +267,7 @@ namespace ts {
                     setOriginalNode(
                         setTextRange(
                             factory.createFunctionExpression(
-                                method.modifiers,
+                                getModifiers(method),
                                 method.asteriskToken,
                                 /*name*/ undefined,
                                 /*typeParameters*/ undefined,
@@ -416,9 +416,24 @@ namespace ts {
             node.kind === SyntaxKind.CommaListExpression;
     }
 
+    export function isJSDocTypeAssertion(node: Node): node is JSDocTypeAssertion {
+        return isParenthesizedExpression(node)
+            && isInJSFile(node)
+            && !!getJSDocTypeTag(node);
+    }
+
+    export function getJSDocTypeAssertionType(node: JSDocTypeAssertion) {
+        const type = getJSDocType(node);
+        Debug.assertIsDefined(type);
+        return type;
+    }
+
     export function isOuterExpression(node: Node, kinds = OuterExpressionKinds.All): node is OuterExpression {
         switch (node.kind) {
             case SyntaxKind.ParenthesizedExpression:
+                if (kinds & OuterExpressionKinds.ExcludeJSDocTypeAssertion && isJSDocTypeAssertion(node)) {
+                    return false;
+                }
                 return (kinds & OuterExpressionKinds.Parentheses) !== 0;
             case SyntaxKind.TypeAssertionExpression:
             case SyntaxKind.AsExpression:
@@ -466,7 +481,7 @@ namespace ts {
         if (compilerOptions.importHelpers && isEffectiveExternalModule(sourceFile, compilerOptions)) {
             let namedBindings: NamedImportBindings | undefined;
             const moduleKind = getEmitModuleKind(compilerOptions);
-            if (moduleKind >= ModuleKind.ES2015 && moduleKind <= ModuleKind.ESNext) {
+            if ((moduleKind >= ModuleKind.ES2015 && moduleKind <= ModuleKind.ESNext) || sourceFile.impliedNodeFormat === ModuleKind.ESNext) {
                 // use named imports
                 const helpers = getEmitHelpers(sourceFile);
                 if (helpers) {
@@ -485,8 +500,8 @@ namespace ts {
                         // NOTE: We don't need to care about global import collisions as this is a module.
                         namedBindings = nodeFactory.createNamedImports(
                             map(helperNames, name => isFileLevelUniqueName(sourceFile, name)
-                                ? nodeFactory.createImportSpecifier(/*propertyName*/ undefined, nodeFactory.createIdentifier(name))
-                                : nodeFactory.createImportSpecifier(nodeFactory.createIdentifier(name), helperFactory.getUnscopedHelperName(name))
+                                ? nodeFactory.createImportSpecifier(/*isTypeOnly*/ false, /*propertyName*/ undefined, nodeFactory.createIdentifier(name))
+                                : nodeFactory.createImportSpecifier(/*isTypeOnly*/ false, nodeFactory.createIdentifier(name), helperFactory.getUnscopedHelperName(name))
                             )
                         );
                         const parseNode = getOriginalNode(sourceFile, isSourceFile);
@@ -504,10 +519,10 @@ namespace ts {
             }
             if (namedBindings) {
                 const externalHelpersImportDeclaration = nodeFactory.createImportDeclaration(
-                    /*decorators*/ undefined,
                     /*modifiers*/ undefined,
                     nodeFactory.createImportClause(/*isTypeOnly*/ false, /*name*/ undefined, namedBindings),
-                    nodeFactory.createStringLiteral(externalHelpersModuleNameText)
+                    nodeFactory.createStringLiteral(externalHelpersModuleNameText),
+                     /*assertClause*/ undefined
                 );
                 addEmitFlags(externalHelpersImportDeclaration, EmitFlags.NeverApplyImportHelper);
                 return externalHelpersImportDeclaration;
@@ -523,9 +538,9 @@ namespace ts {
             }
 
             const moduleKind = getEmitModuleKind(compilerOptions);
-            let create = (hasExportStarsToExportValues || (compilerOptions.esModuleInterop && hasImportStarOrImportDefault))
+            let create = (hasExportStarsToExportValues || (getESModuleInterop(compilerOptions) && hasImportStarOrImportDefault))
                 && moduleKind !== ModuleKind.System
-                && moduleKind < ModuleKind.ES2015;
+                && (moduleKind < ModuleKind.ES2015 || node.impliedNodeFormat === ModuleKind.CommonJS);
             if (!create) {
                 const helpers = getEmitHelpers(node);
                 if (helpers) {
@@ -849,31 +864,48 @@ namespace ts {
         }
     }
 
-    export function canHaveModifiers(node: Node): node is HasModifiers {
+    export function canHaveIllegalType(node: Node): node is HasIllegalType {
         const kind = node.kind;
-        return kind === SyntaxKind.Parameter
-            || kind === SyntaxKind.PropertySignature
-            || kind === SyntaxKind.PropertyDeclaration
-            || kind === SyntaxKind.MethodSignature
-            || kind === SyntaxKind.MethodDeclaration
-            || kind === SyntaxKind.Constructor
+        return kind === SyntaxKind.Constructor
+            || kind === SyntaxKind.SetAccessor;
+    }
+
+    export function canHaveIllegalTypeParameters(node: Node): node is HasIllegalTypeParameters {
+        const kind = node.kind;
+        return kind === SyntaxKind.Constructor
             || kind === SyntaxKind.GetAccessor
-            || kind === SyntaxKind.SetAccessor
-            || kind === SyntaxKind.IndexSignature
-            || kind === SyntaxKind.FunctionExpression
-            || kind === SyntaxKind.ArrowFunction
-            || kind === SyntaxKind.ClassExpression
-            || kind === SyntaxKind.VariableStatement
+            || kind === SyntaxKind.SetAccessor;
+    }
+
+    export function canHaveIllegalDecorators(node: Node): node is HasIllegalDecorators {
+        const kind = node.kind;
+        return kind === SyntaxKind.PropertyAssignment
+            || kind === SyntaxKind.ShorthandPropertyAssignment
             || kind === SyntaxKind.FunctionDeclaration
-            || kind === SyntaxKind.ClassDeclaration
+            || kind === SyntaxKind.Constructor
+            || kind === SyntaxKind.IndexSignature
+            || kind === SyntaxKind.ClassStaticBlockDeclaration
+            || kind === SyntaxKind.MissingDeclaration
+            || kind === SyntaxKind.VariableStatement
             || kind === SyntaxKind.InterfaceDeclaration
             || kind === SyntaxKind.TypeAliasDeclaration
             || kind === SyntaxKind.EnumDeclaration
             || kind === SyntaxKind.ModuleDeclaration
             || kind === SyntaxKind.ImportEqualsDeclaration
             || kind === SyntaxKind.ImportDeclaration
-            || kind === SyntaxKind.ExportAssignment
-            || kind === SyntaxKind.ExportDeclaration;
+            || kind === SyntaxKind.NamespaceExportDeclaration
+            || kind === SyntaxKind.ExportDeclaration
+            || kind === SyntaxKind.ExportAssignment;
+    }
+
+    export function canHaveIllegalModifiers(node: Node): node is HasIllegalModifiers {
+        const kind = node.kind;
+        return kind === SyntaxKind.ClassStaticBlockDeclaration
+            || kind === SyntaxKind.PropertyAssignment
+            || kind === SyntaxKind.ShorthandPropertyAssignment
+            || kind === SyntaxKind.FunctionType
+            || kind === SyntaxKind.MissingDeclaration
+            || kind === SyntaxKind.NamespaceExportDeclaration;
     }
 
     export const isTypeNodeOrTypeParameterDeclaration = or(isTypeNode, isTypeParameterDeclaration) as (node: Node) => node is TypeNode | TypeParameterDeclaration;
@@ -1198,5 +1230,17 @@ namespace ts {
             Debug.assertEqual(stackIndex, 0);
             return resultHolder.value;
         }
+    }
+
+    /**
+     * If `nodes` is not undefined, creates an empty `NodeArray` that preserves the `pos` and `end` of `nodes`.
+     * @internal
+     */
+    export function elideNodes<T extends Node>(factory: NodeFactory, nodes: NodeArray<T>): NodeArray<T>;
+    export function elideNodes<T extends Node>(factory: NodeFactory, nodes: NodeArray<T> | undefined): NodeArray<T> | undefined;
+    export function elideNodes<T extends Node>(factory: NodeFactory, nodes: NodeArray<T> | undefined): NodeArray<T> | undefined {
+        if (nodes === undefined) return undefined;
+        if (nodes.length === 0) return nodes;
+        return setTextRange(factory.createNodeArray([], nodes.hasTrailingComma), nodes);
     }
 }

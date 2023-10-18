@@ -49,6 +49,7 @@ DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject/app/node
 Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject/app/node_modules 1 undefined Project: /user/username/projects/myproject/app/src/program/tsconfig.json WatchType: Failed Lookup Locations
 DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject/node_modules 1 undefined Project: /user/username/projects/myproject/app/src/program/tsconfig.json WatchType: Failed Lookup Locations
 Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject/node_modules 1 undefined Project: /user/username/projects/myproject/app/src/program/tsconfig.json WatchType: Failed Lookup Locations
+FileWatcher:: Added:: WatchInfo: /user/username/projects/myproject/shared/package.json 2000 undefined Project: /user/username/projects/myproject/app/src/program/tsconfig.json WatchType: File location affecting resolution
 DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject/app/src/program/node_modules/@types 1 undefined Project: /user/username/projects/myproject/app/src/program/tsconfig.json WatchType: Type roots
 Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject/app/src/program/node_modules/@types 1 undefined Project: /user/username/projects/myproject/app/src/program/tsconfig.json WatchType: Type roots
 DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject/app/src/node_modules/@types 1 undefined Project: /user/username/projects/myproject/app/src/program/tsconfig.json WatchType: Type roots
@@ -67,13 +68,13 @@ Project '/user/username/projects/myproject/app/src/program/tsconfig.json' (Confi
 
 
 	../../../../../../../a/lib/lib.d.ts
-	  Default library
+	  Default library for target 'es3'
 	../../../shared/src/library/index.ts
 	  Imported via "shared" from file 'bar.ts' with packageId 'shared/bld/library/index.d.ts@1.0.0'
 	bar.ts
-	  Matched by include pattern '**/*' in 'tsconfig.json'
+	  Matched by default include pattern '**/*'
 	index.ts
-	  Matched by include pattern '**/*' in 'tsconfig.json'
+	  Matched by default include pattern '**/*'
 
 -----------------------------------------------
 Search path: /user/username/projects/myproject/app/src/program
@@ -97,4 +98,4 @@ response:{"responseRequired":false}
 request:{"command":"getCodeFixes","arguments":{"file":"/user/username/projects/myproject/app/src/program/index.ts","startLine":1,"startOffset":1,"endLine":1,"endOffset":4,"errorCodes":[2304]},"seq":1,"type":"request"}
 DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
 Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
-response:{"response":[{"fixName":"import","description":"Import 'foo' from module \"shared\"","changes":[{"fileName":"/user/username/projects/myproject/app/src/program/index.ts","textChanges":[{"start":{"line":1,"offset":1},"end":{"line":1,"offset":1},"newText":"import { foo } from \"shared\";\n\n"}]}]}],"responseRequired":true}
+response:{"response":[{"fixName":"import","description":"Add import from \"shared\"","changes":[{"fileName":"/user/username/projects/myproject/app/src/program/index.ts","textChanges":[{"start":{"line":1,"offset":1},"end":{"line":1,"offset":1},"newText":"import { foo } from \"shared\";\n\n"}]}]}],"responseRequired":true}

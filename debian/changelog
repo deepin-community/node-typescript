@@ -1,3 +1,71 @@
+node-typescript (4.8.4+ds1-2) unstable; urgency=medium
+
+  * Prepare for upload to unstable.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 18 Oct 2022 18:18:00 +0200
+
+node-typescript (4.8.4+ds1-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 03 Oct 2022 13:24:52 +0200
+
+node-typescript (4.7.4+ds1-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 20 Jun 2022 11:42:54 +0200
+
+node-typescript (4.7.3+ds1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump standards-version to 4.6.1.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 13 Jun 2022 17:02:32 +0200
+
+node-typescript (4.6.4+ds1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 02 May 2022 10:30:14 +0200
+
+node-typescript (4.6.3+ds1-2) unstable; urgency=medium
+
+  * Re-upload to unstable now real issues are gone.
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 31 Mar 2022 08:46:33 +0200
+
+node-typescript (4.6.3+ds1-1) experimental; urgency=medium
+
+  [ lintian-brush ]
+  * Use secure URI in Homepage field.
+  * Set upstream metadata fields: Security-Contact.
+
+  [ Yadd ]
+  * Update nodejs dependency to nodejs:any
+  * Add patch to ignore debian and quilt directories
+  * Use dh-sequence-nodejs auto install
+
+  [ Julien Puydt ]
+  * New upstream release.
+  * Ship the tsserver binary (Closes: #1006862).
+  * Refresh patch.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 25 Mar 2022 16:09:37 +0100
+
+node-typescript (4.5.4+ds1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 21 Dec 2021 14:38:44 +0100
+
+node-typescript (4.5.2+ds1-1) unstable; urgency=medium
+
+  * Fix d/watch.
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 19 Nov 2021 16:11:55 +0100
+
 node-typescript (4.4.4+ds1-1) unstable; urgency=medium
 
   * New upstream release.

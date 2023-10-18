@@ -62,6 +62,7 @@ async function copyScriptOutputs() {
     await copyWithCopyright("cancellationToken.js");
     await copyWithCopyright("tsc.release.js", "tsc.js");
     await copyWithCopyright("tsserver.js");
+    await copyWithCopyright("dynamicImportCompat.js");
     await copyFromBuiltLocal("tsserverlibrary.js"); // copyright added by build
     await copyFromBuiltLocal("typescript.js"); // copyright added by build
     await copyFromBuiltLocal("typescriptServices.js"); // copyright added by build
@@ -102,5 +103,9 @@ async function exec(path: string, args: string[] = []) {
     childProcess.execSync(cmdLine);
 }
 
-process.on("unhandledRejection", err => { throw err; });
-produceLKG().then(() => console.log("Done"), err => { throw err; });
+process.on("unhandledRejection", err => {
+    throw err;
+});
+produceLKG().then(() => console.log("Done"), err => {
+    throw err;
+});

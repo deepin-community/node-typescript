@@ -1,0 +1,87 @@
+Description: update ignored paths
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2021-12-24
+
+--- node-typescript.orig/lib/tsc.js
++++ node-typescript/lib/tsc.js
+@@ -3843,7 +3843,7 @@
+                 : FileWatcherEventKind.Changed;
+     }
+     ts.getFileWatcherEventKind = getFileWatcherEventKind;
+-    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#"];
++    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#", "/debian/", "/.pc"];
+     var curSysLog = ts.noop;
+     function sysLog(s) {
+         return curSysLog(s);
+--- node-typescript.orig/lib/tsserver.js
++++ node-typescript/lib/tsserver.js
+@@ -6299,7 +6299,7 @@
+     }
+     ts.getFileWatcherEventKind = getFileWatcherEventKind;
+     /*@internal*/
+-    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#"];
++    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#", "/debian/", "/.pc"];
+     var curSysLog = ts.noop; // eslint-disable-line prefer-const
+     /*@internal*/
+     function sysLog(s) {
+@@ -180112,4 +180112,4 @@
+         }
+     })(server = ts.server || (ts.server = {}));
+ })(ts || (ts = {}));
+-//# sourceMappingURL=tsserver.js.map
+\ No newline at end of file
++//# sourceMappingURL=tsserver.js.map
+--- node-typescript.orig/lib/tsserverlibrary.js
++++ node-typescript/lib/tsserverlibrary.js
+@@ -6493,7 +6493,7 @@
+     }
+     ts.getFileWatcherEventKind = getFileWatcherEventKind;
+     /*@internal*/
+-    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#"];
++    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#", "/debian/", "/.pc"];
+     var curSysLog = ts.noop; // eslint-disable-line prefer-const
+     /*@internal*/
+     function sysLog(s) {
+--- node-typescript.orig/lib/typescript.js
++++ node-typescript/lib/typescript.js
+@@ -6493,7 +6493,7 @@
+     }
+     ts.getFileWatcherEventKind = getFileWatcherEventKind;
+     /*@internal*/
+-    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#"];
++    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#", "/debian/", "/.pc"];
+     var curSysLog = ts.noop; // eslint-disable-line prefer-const
+     /*@internal*/
+     function sysLog(s) {
+--- node-typescript.orig/lib/typescriptServices.js
++++ node-typescript/lib/typescriptServices.js
+@@ -6493,7 +6493,7 @@
+     }
+     ts.getFileWatcherEventKind = getFileWatcherEventKind;
+     /*@internal*/
+-    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#"];
++    ts.ignoredPaths = ["/node_modules/.", "/.git", "/.#", "/debian/", "/.pc"];
+     var curSysLog = ts.noop; // eslint-disable-line prefer-const
+     /*@internal*/
+     function sysLog(s) {
+--- node-typescript.orig/lib/typingsInstaller.js
++++ node-typescript/lib/typingsInstaller.js
+@@ -126493,4 +126493,4 @@
+         })(typingsInstaller = server.typingsInstaller || (server.typingsInstaller = {}));
+     })(server = ts.server || (ts.server = {}));
+ })(ts || (ts = {}));
+-//# sourceMappingURL=typingsInstaller.js.map
+\ No newline at end of file
++//# sourceMappingURL=typingsInstaller.js.map
+--- node-typescript.orig/src/compiler/sys.ts
++++ node-typescript/src/compiler/sys.ts
+@@ -497,7 +497,7 @@
+     }
+ 
+     /*@internal*/
+-    export const ignoredPaths = ["/node_modules/.", "/.git", "/.#"];
++    export const ignoredPaths = ["/node_modules/.", "/.git", "/.#", "/debian/", "/.pc"];
+ 
+     let curSysLog: (s: string) => void = noop; // eslint-disable-line prefer-const
+ 

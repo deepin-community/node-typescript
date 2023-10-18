@@ -73,16 +73,16 @@ WatchedFiles::
   {"fileName":"/user/username/projects/myproject/client/linktofolder2/module2.ts","pollingInterval":250}
 /a/lib/lib.d.ts:
   {"fileName":"/a/lib/lib.d.ts","pollingInterval":250}
+/user/username/projects/myproject/node_modules/@types:
+  {"fileName":"/user/username/projects/myproject/node_modules/@types","pollingInterval":500}
 
 FsWatches::
 
 FsWatchesRecursive::
-/user/username/projects/myproject/node_modules/@types:
-  {"directoryName":"/user/username/projects/myproject/node_modules/@types","fallbackPollingInterval":500,"fallbackOptions":{"watchFile":"PriorityPollingInterval"}}
 /user/username/projects/myproject/client:
-  {"directoryName":"/user/username/projects/myproject/client","fallbackPollingInterval":500,"fallbackOptions":{"watchFile":"PriorityPollingInterval"}}
+  {"directoryName":"/user/username/projects/myproject/client"}
 /user/username/projects/myproject/folder2:
-  {"directoryName":"/user/username/projects/myproject/folder2","fallbackPollingInterval":500,"fallbackOptions":{"watchFile":"PriorityPollingInterval"}}
+  {"directoryName":"/user/username/projects/myproject/folder2"}
 
 exitCode:: ExitStatus.undefined
 
@@ -115,10 +115,10 @@ Output::
 DirectoryWatcher:: Triggered with /user/username/projects/myproject/folder2/module3.ts :: WatchInfo: /user/username/projects/myproject/folder2 1 undefined Wild card directory
 Scheduling update
 Elapsed:: *ms DirectoryWatcher:: Triggered with /user/username/projects/myproject/folder2/module3.ts :: WatchInfo: /user/username/projects/myproject/folder2 1 undefined Wild card directory
-[[90m12:00:41 AM[0m] File change detected. Starting incremental compilation...
-
 Reloading new file names and options
 Synchronizing program
+[[90m12:00:41 AM[0m] File change detected. Starting incremental compilation...
+
 CreatingProgramWith::
   roots: ["/user/username/projects/myproject/client/folder1/module1.ts","/user/username/projects/myproject/client/linktofolder2/module2.ts","/user/username/projects/myproject/client/linktofolder2/module3.ts"]
   options: {"baseUrl":"/user/username/projects/myproject/client","paths":{"*":["*"]},"pathsBasePath":"/user/username/projects/myproject","watch":true,"project":"/user/username/projects/myproject","extendedDiagnostics":true,"configFilePath":"/user/username/projects/myproject/tsconfig.json"}
@@ -154,18 +154,18 @@ WatchedFiles::
   {"fileName":"/user/username/projects/myproject/client/linktofolder2/module2.ts","pollingInterval":250}
 /a/lib/lib.d.ts:
   {"fileName":"/a/lib/lib.d.ts","pollingInterval":250}
+/user/username/projects/myproject/node_modules/@types:
+  {"fileName":"/user/username/projects/myproject/node_modules/@types","pollingInterval":500}
 /user/username/projects/myproject/client/linktofolder2/module3.ts:
   {"fileName":"/user/username/projects/myproject/client/linktofolder2/module3.ts","pollingInterval":250}
 
 FsWatches::
 
 FsWatchesRecursive::
-/user/username/projects/myproject/node_modules/@types:
-  {"directoryName":"/user/username/projects/myproject/node_modules/@types","fallbackPollingInterval":500,"fallbackOptions":{"watchFile":"PriorityPollingInterval"}}
 /user/username/projects/myproject/client:
-  {"directoryName":"/user/username/projects/myproject/client","fallbackPollingInterval":500,"fallbackOptions":{"watchFile":"PriorityPollingInterval"}}
+  {"directoryName":"/user/username/projects/myproject/client"}
 /user/username/projects/myproject/folder2:
-  {"directoryName":"/user/username/projects/myproject/folder2","fallbackPollingInterval":500,"fallbackOptions":{"watchFile":"PriorityPollingInterval"}}
+  {"directoryName":"/user/username/projects/myproject/folder2"}
 
 exitCode:: ExitStatus.undefined
 

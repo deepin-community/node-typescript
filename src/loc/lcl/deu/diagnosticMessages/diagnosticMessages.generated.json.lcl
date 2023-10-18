@@ -39,15 +39,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";A_0_modifier_cannot_be_used_with_an_interface_declaration_1045" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[A '{0}' modifier cannot be used with an interface declaration.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ein Modifizierer "{0}" darf nicht mit einer Schnittstellendeklaration verwendet werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";A_0_parameter_must_be_the_first_parameter_2680" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A '{0}' parameter must be the first parameter.]]></Val>
@@ -141,15 +132,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";A_class_may_only_extend_another_class_2311" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[A class may only extend another class.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Eine Klasse kann nur eine andere Klasse erweitern.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";A_class_member_cannot_have_the_0_keyword_1248" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A class member cannot have the '{0}' keyword.]]></Val>
@@ -227,15 +209,6 @@
           <Val><![CDATA[A computed property name must be of type 'string', 'number', 'symbol', or 'any'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ein berechneter Eigenschaftenname muss vom Typ "string", "number", "symbol" oder "any" sein.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";A_computed_property_name_of_the_form_0_must_be_of_type_symbol_2471" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[A computed property name of the form '{0}' must be of type 'symbol'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ein berechneter Eigenschaftenname in der Form "{0}" muss vom Typ "symbol" sein.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -495,6 +468,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";A_mapped_type_may_not_declare_properties_or_methods_7061" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A mapped type may not declare properties or methods.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ein zugeordneter Typ darf keine Eigenschaften oder Methoden deklarieren.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";A_member_initializer_in_a_enum_declaration_cannot_reference_members_declared_after_it_including_memb_2651" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A member initializer in a enum declaration cannot reference members declared after it, including members defined in other enums.]]></Val>
@@ -555,20 +537,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";A_namespace_declaration_is_only_allowed_in_a_namespace_or_module_1235" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";A_namespace_declaration_is_only_allowed_at_the_top_level_of_a_namespace_or_module_1235" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[A namespace declaration is only allowed in a namespace or module.]]></Val>
+          <Val><![CDATA[A namespace declaration is only allowed at the top level of a namespace or module.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Eine Namespacedeklaration ist nur in einem Namespace oder Modul zulässig.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";A_new_expression_with_type_arguments_must_always_be_followed_by_a_parenthesized_argument_list_1384" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[A 'new' expression with type arguments must always be followed by a parenthesized argument list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Auf einen new-Ausdruck mit Typargumenten muss immer eine in Klammern gesetzte Argumentliste folgen.]]></Val>
+            <Val><![CDATA[Eine Namespacedeklaration ist nur auf der obersten Ebene eines Namespaces oder Moduls zulässig.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -641,15 +614,6 @@
           <Val><![CDATA[A parameter property may not be declared using a binding pattern.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Eine Parametereigenschaft darf nicht mithilfe eines Bindungsmusters deklariert werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";A_path_in_an_extends_option_must_be_relative_or_rooted_but_0_is_not_18001" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[A path in an 'extends' option must be relative or rooted, but '{0}' is not.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ein Pfad in einer extends-Option muss ein relativer Pfad oder ein Stammpfad sein, aber dies trifft auf "{0}" nicht zu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -870,15 +834,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";A_signature_with_an_implementation_cannot_use_a_string_literal_type_2381" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[A signature with an implementation cannot use a string literal type.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Eine Signatur mit einer Implementierung darf keinen Zeichenfolgen-Literaltyp verwenden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";A_spread_argument_must_either_have_a_tuple_type_or_be_passed_to_a_rest_parameter_2556" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A spread argument must either have a tuple type or be passed to a rest parameter.]]></Val>
@@ -888,15 +843,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";A_super_call_must_be_the_first_statement_in_the_constructor_when_a_class_contains_initialized_proper_2376" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";A_super_call_must_be_a_root_level_statement_within_a_constructor_of_a_derived_class_that_contains_in_2401" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[A 'super' call must be the first statement in the constructor when a class contains initialized properties, parameter properties, or private identifiers.]]></Val>
+          <Val><![CDATA[A 'super' call must be a root-level statement within a constructor of a derived class that contains initialized properties, parameter properties, or private identifiers.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ein super-Aufruf muss die erste Anweisung im Konstruktor sein, wenn eine Klasse initialisierte Eigenschaften, Parametereigenschaften oder private Bezeichner enthält.]]></Val>
+            <Val><![CDATA[Ein „super“ Aufruf muss eine Anweisung auf Stammebene innerhalb eines Konstruktors einer abgeleiteten Klasse sein, die initialisierte Eigenschaften, Parametereigenschaften oder private Bezeichner enthält.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[A 'super' call must be the first statement in the constructor when a class contains initialized properties or has parameter properties.]]></Val>
-          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";A_super_call_must_be_the_first_statement_in_the_constructor_to_refer_to_super_or_this_when_a_derived_2376" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A 'super' call must be the first statement in the constructor to refer to 'super' or 'this' when a derived class contains initialized properties, parameter properties, or private identifiers.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ein „super“ Aufruf muss die erste Anweisung im Konstruktor sein, um auf „super“ oder „this“ zu verweisen, wenn eine abgeleitete Klasse initialisierte Eigenschaften, Parametereigenschaften oder private Bezeichner enthält.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -932,6 +893,15 @@
           <Val><![CDATA[A tuple member cannot be both optional and rest.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ein Tupelelement kann nicht gleichzeitig als "optional" und als "rest" festgelegt werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";A_tuple_type_cannot_be_indexed_with_a_negative_value_2514" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A tuple type cannot be indexed with a negative value.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ein Tupeltyp kann nicht mit einem negativen Wert indiziert werden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -995,6 +965,15 @@
           <Val><![CDATA[A type predicate's type must be assignable to its parameter's type.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Typ eines Typprädikats muss dem Typ seines Parameters zugewiesen werden können.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";A_type_referenced_in_a_decorated_signature_must_be_imported_with_import_type_or_a_namespace_import_w_1272" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A type referenced in a decorated signature must be imported with 'import type' or a namespace import when 'isolatedModules' and 'emitDecoratorMetadata' are enabled.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ein Typ, auf den in einer ergänzten Signatur verwiesen wird, muss mit „import type“ oder einem Namespaceimport importiert werden, wenn „isolatedModules“ und „emitDecoratorMetadata“ aktiviert sind.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1071,18 +1050,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Add_0_to_existing_import_declaration_from_1_90015" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Add '{0}' to existing import declaration from "{1}"]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" der vorhandenen Importdeklaration aus "{1}" hinzufügen]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Add '{0}' to existing import declaration from "{1}".]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Add_0_to_unresolved_variable_90008" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Add '{0}.' to unresolved variable]]></Val>
@@ -1106,6 +1073,15 @@
           <Val><![CDATA[Add all missing 'async' modifiers]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Alle fehlenden async-Modifizierer hinzufügen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Add_all_missing_attributes_95168" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Add all missing attributes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Alle fehlenden Attribute hinzufügen]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1227,15 +1203,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Add_class_tag_95102" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Add '@class' tag]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[@class-Tag hinzufügen]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Add_const_to_all_unresolved_variables_95082" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Add 'const' to all unresolved variables]]></Val>
@@ -1250,15 +1217,6 @@
           <Val><![CDATA[Add 'const' to unresolved variable]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA["const" zur nicht aufgelösten Variable hinzufügen]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Add_default_import_0_to_existing_import_declaration_from_1_90033" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Add default import '{0}' to existing import declaration from "{1}"]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Standardimport "{0}" zur vorhandenen Importdeklaration aus "{1}" hinzufügen]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1290,6 +1248,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Add_extends_constraint_2211" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Add `extends` constraint.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["extends"-Einschränkung hinzufügen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Add_extends_constraint_to_all_type_parameters_2212" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Add `extends` constraint to all type parameters]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["extends"-Einschränkung zu allen Typparametern hinzufügen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Add_import_from_0_90057" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Add import from "{0}"]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Import aus "{0}" hinzufügen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Add_index_signature_for_property_0_90017" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Add index signature for property '{0}']]></Val>
@@ -1316,6 +1301,15 @@
           <Val><![CDATA[Add initializers to all uninitialized properties]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Allen nicht initialisierten Eigenschaften Initialisierer hinzufügen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Add_missing_attributes_95167" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Add missing attributes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fehlende Attribute hinzufügen]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1440,24 +1434,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Add_this_parameter_95104" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Add 'this' parameter.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[this-Parameter hinzufügen]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Add_this_tag_95103" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Add '@this' tag]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[@this-Tag hinzufügen]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Add_to_all_uncalled_decorators_95044" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Add '()' to all uncalled decorators]]></Val>
@@ -1478,9 +1454,21 @@
       </Item>
       <Item ItemId=";Add_undefined_to_a_type_when_accessed_using_an_index_6674" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Add `undefined` to a type when accessed using an index.]]></Val>
+          <Val><![CDATA[Add 'undefined' to a type when accessed using an index.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Fügen Sie einem Typ "undefined" hinzu, wenn über einen Index darauf zugegriffen wird.]]></Val>
+            <Val><![CDATA[Fügen Sie einem Typ „undefined“ hinzu, wenn über einen Index darauf zugegriffen wird.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Add `undefined` to a type when accessed using an index.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Add_undefined_to_optional_property_type_95169" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Add 'undefined' to optional property type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„Undefined“ zum optionalen Eigenschaftstyp hinzufügen]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1544,6 +1532,15 @@
           <Val><![CDATA[Adding a tsconfig.json file will help organize projects that contain both TypeScript and JavaScript files. Learn more at https://aka.ms/tsconfig.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Hinzufügen einer "tsconfig.json"-Datei erleichtert die Organisation von Projekten, die sowohl TypeScript- als auch JavaScript-Dateien enthalten. Weitere Informationen finden Sie unter https://aka.ms/tsconfig.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";All_declarations_of_0_must_have_identical_constraints_2838" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All declarations of '{0}' must have identical constraints.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Alle Deklarationen von "{0}" müssen identische Modifizierer aufweisen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1616,10 +1613,13 @@
       </Item>
       <Item ItemId=";Allow_JavaScript_files_to_be_a_part_of_your_program_Use_the_checkJS_option_to_get_errors_from_these__6600" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files.]]></Val>
+          <Val><![CDATA[Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Lassen Sie JavaScript-Dateien Teil Ihres Programms werden. Verwenden Sie die Option "checkJS", um Fehler aus diesen Dateien abzurufen.]]></Val>
+            <Val><![CDATA[Lassen Sie zu, dass JavaScript-Dateien Teil Ihres Programms werden. Verwenden Sie die Option „checkJS“, um Fehler aus diesen Dateien abzurufen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1797,15 +1797,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";An_async_function_or_method_must_have_a_valid_awaitable_return_type_1057" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[An async function or method must have a valid awaitable return type.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Eine asynchrone Funktion oder Methode muss einen gültigen awaitable-Rückgabetyp aufweisen.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";An_async_function_or_method_must_return_a_Promise_Make_sure_you_have_a_declaration_for_Promise_or_in_2697" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[An async function or method must return a 'Promise'. Make sure you have a declaration for 'Promise' or include 'ES2015' in your '--lib' option.]]></Val>
@@ -1908,11 +1899,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";An_export_declaration_can_only_be_used_in_a_module_1233" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";An_export_declaration_can_only_be_used_at_the_top_level_of_a_module_1474" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[An export declaration can only be used in a module.]]></Val>
+          <Val><![CDATA[An export declaration can only be used at the top level of a module.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Eine Exportdeklaration kann nur in einem Modul verwendet werden.]]></Val>
+            <Val><![CDATA[Eine Exportdeklaration kann nur auf der obersten Ebene eines Moduls verwendet werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";An_export_declaration_can_only_be_used_at_the_top_level_of_a_namespace_or_module_1233" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An export declaration can only be used at the top level of a namespace or module.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Eine Exportdeklaration kann nur auf der obersten Ebene eines Namespace oder Moduls verwendet werden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1992,11 +1992,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";An_import_declaration_can_only_be_used_in_a_namespace_or_module_1232" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";An_import_declaration_can_only_be_used_at_the_top_level_of_a_module_1473" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[An import declaration can only be used in a namespace or module.]]></Val>
+          <Val><![CDATA[An import declaration can only be used at the top level of a module.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Eine Importdeklaration darf nur in einem Namespace oder Modul verwendet werden.]]></Val>
+            <Val><![CDATA[Eine Importdeklaration kann nur auf der obersten Ebene eines Moduls verwendet werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";An_import_declaration_can_only_be_used_at_the_top_level_of_a_namespace_or_module_1232" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An import declaration can only be used at the top level of a namespace or module.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Eine Importdeklaration kann nur auf der obersten Ebene eines Namespace oder Moduls verwendet werden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2015,15 +2024,6 @@
           <Val><![CDATA[An import path cannot end with a '{0}' extension. Consider importing '{1}' instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ein Importpfad darf nicht mit einer Erweiterung "{0}" enden. Importieren Sie ggf. stattdessen "{1}".]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";An_index_expression_argument_must_be_of_type_string_number_symbol_or_any_2342" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[An index expression argument must be of type 'string', 'number', 'symbol', or 'any'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ein Indexausdrucksargument muss vom Typ "string", "number", "symbol" oder "any" sein.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2118,6 +2118,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";An_instantiation_expression_cannot_be_followed_by_a_property_access_1477" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An instantiation expression cannot be followed by a property access.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Auf einen Instanziierungsausdruck kann kein Eigenschaftenzugriff folgen.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";An_interface_can_only_extend_an_identifier_Slashqualified_name_with_optional_type_arguments_2499" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[An interface can only extend an identifier/qualified-name with optional type arguments.]]></Val>
@@ -2132,6 +2141,15 @@
           <Val><![CDATA[An interface can only extend an object type or intersection of object types with statically known members.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Eine Schnittstelle kann nur einen Objekttyp oder eine Schnittmenge von Objekttypen mit statisch bekannten Membern erweitern.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";An_interface_cannot_extend_a_primitive_type_like_0_an_interface_can_only_extend_named_types_and_clas_2840" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An interface cannot extend a primitive type like '{0}'; an interface can only extend named types and classes]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Eine Schnittstelle kann einen primitiven Typ wie „{0}“ nicht erweitern; eine Schnittstelle kann nur benannte Typen und Klassen erweitern]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2172,11 +2190,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";An_object_literal_cannot_have_multiple_properties_with_the_same_name_in_strict_mode_1117" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";An_object_literal_cannot_have_multiple_properties_with_the_same_name_1117" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[An object literal cannot have multiple properties with the same name in strict mode.]]></Val>
+          <Val><![CDATA[An object literal cannot have multiple properties with the same name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ein Objektliteral darf im Strict-Modus nicht mehrere Eigenschaften mit dem gleichen Namen besitzen.]]></Val>
+            <Val><![CDATA[Ein Objektliteral darf nicht über mehrere Eigenschaften mit demselben Namen verfügen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2262,15 +2280,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Annotate_with_types_from_JSDoc_95010" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Annotate with types from JSDoc]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Mit Typen aus JSDoc kommentieren]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Another_export_default_is_here_2753" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Another export default is here.]]></Val>
@@ -2310,11 +2319,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Argument_of_dynamic_import_cannot_be_spread_element_1325" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Argument of dynamic import cannot be spread element.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Argument des dynamischen Imports kann kein Überfüllungselement sein.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Argument_of_type_0_is_not_assignable_to_parameter_of_type_1_2345" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Argument of type '{0}' is not assignable to parameter of type '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Argument vom Typ "{0}" kann dem Parameter vom Typ "{1}" nicht zugewiesen werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Argument_of_type_0_is_not_assignable_to_parameter_of_type_1_with_exactOptionalPropertyTypes_Colon_tr_2379" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Argument of type '{0}' is not assignable to parameter of type '{1}' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Argument vom Typ „{0}“ kann dem Parameter vom Typ „{1}“ mit „exactOptionalPropertyTypes: true“ nicht zugewiesen werden. Erwägen Sie das Hinzufügen von „undefined“ zu den Typen der Zieleigenschaften.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2501,10 +2528,13 @@
       </Item>
       <Item ItemId=";Build_all_projects_including_those_that_appear_to_be_up_to_date_6636" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Build all projects, including those that appear to be up to date]]></Val>
+          <Val><![CDATA[Build all projects, including those that appear to be up to date.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Alle Projekte erstellen, einschließlich solcher, die anscheinend auf dem neuesten Stand sind]]></Val>
+            <Val><![CDATA[Erstellen Sie alle Projekte, einschließlich der Projekte, die aktuell zu sein scheinen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Build all projects, including those that appear to be up to date]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2958,6 +2988,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Cannot_find_name_0_Did_you_mean_to_write_this_in_an_async_function_2311" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cannot find name '{0}'. Did you mean to write this in an async function?]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Name „{0}“ wurde nicht gefunden. Wollten Sie dies in eine asynchrone Funktion schreiben?]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Cannot_find_name_0_Do_you_need_to_change_your_target_library_Try_changing_the_lib_compiler_option_to_2583" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cannot find name '{0}'. Do you need to change your target library? Try changing the 'lib' compiler option to '{1}' or later.]]></Val>
@@ -3050,6 +3089,15 @@
           <Val><![CDATA[Cannot find namespace '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Namespace "{0}" wurde nicht gefunden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Cannot_find_namespace_0_Did_you_mean_1_2833" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cannot find namespace '{0}'. Did you mean '{1}'?]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Namespace "{0}" wurde nicht gefunden. Meinten Sie "{1}"?]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3240,6 +3288,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Cannot_use_export_import_on_a_type_or_type_only_namespace_when_the_isolatedModules_flag_is_provided_1269" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cannot use 'export import' on a type or type-only namespace when the '--isolatedModules' flag is provided.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„export import“ kann nicht für einen Typ oder einen reinen Typnamespace verwendet werden, wenn das Flag „--isolatedModules“ angegeben wird.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Cannot_use_imports_exports_or_module_augmentations_when_module_is_none_1148" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cannot use imports, exports, or module augmentations when '--module' is 'none'.]]></Val>
@@ -3395,10 +3452,13 @@
       </Item>
       <Item ItemId=";Check_that_the_arguments_for_bind_call_and_apply_methods_match_the_original_function_6697" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Check that the arguments for `bind`, `call`, and `apply` methods match the original function.]]></Val>
+          <Val><![CDATA[Check that the arguments for 'bind', 'call', and 'apply' methods match the original function.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Überprüfen Sie, ob die Argumente für die Methoden "bind", "call" und "apply" mit der ursprünglichen Funktion übereinstimmen.]]></Val>
+            <Val><![CDATA[Überprüfen Sie, ob die Argumente für die Methoden „bind“, „call“ und „apply“ mit der ursprünglichen Funktion übereinstimmen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Check that the arguments for `bind`, `call`, and `apply` methods match the original function.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3501,6 +3561,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Class_constructor_may_not_be_a_generator_1360" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Class constructor may not be a generator.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Klassenkonstruktor darf kein Generator sein.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Class_constructor_may_not_be_an_accessor_1341" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Class constructor may not be an accessor.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Klassenkonstruktor darf kein Accessor sein.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Class_declaration_cannot_implement_overload_list_for_0_2813" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Class declaration cannot implement overload list for '{0}'.]]></Val>
@@ -3570,20 +3648,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Classes_containing_abstract_methods_must_be_marked_abstract_2514" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Classes containing abstract methods must be marked abstract.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Klassen, die abstrakte Methoden enthalten, müssen als abstrakt markiert werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Classes_may_not_have_a_field_named_constructor_18006" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Classes may not have a field named 'constructor'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Klassen dürfen kein Feld mit dem Namen "constructor" aufweisen.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Code_contained_in_a_class_is_evaluated_in_JavaScript_s_strict_mode_which_does_not_allow_this_use_of__1210" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Code contained in a class is evaluated in JavaScript's strict mode which does not allow this use of '{0}'. For more information, see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Code, der in einer Klasse enthalten ist, wird im Strict-Modus von JavaScript ausgewertet, der diese Verwendung von "{0}" nicht zulässt. Weitere Informationen finden Sie unter https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3642,6 +3720,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Compiler_option_0_of_value_1_is_unstable_Use_nightly_TypeScript_to_silence_this_error_Try_updating_w_4124" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Compiler option '{0}' of value '{1}' is unstable. Use nightly TypeScript to silence this error. Try updating with 'npm install -D typescript@next'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Compileroption „{0}“ des Werts „{1}“ ist instabil. Verwenden Sie „Nightly TypeScript“, um diesen Fehler zu beheben. Versuchen Sie die Aktualisierung mit „npm install -D typescript@next“ durchzuführen.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Compiler_option_0_requires_a_value_of_type_1_5024" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Compiler option '{0}' requires a value of type {1}.]]></Val>
@@ -3662,10 +3749,13 @@
       </Item>
       <Item ItemId=";Compiles_the_TypeScript_project_located_at_the_specified_path_6927" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Compiles the TypeScript project located at the specified path]]></Val>
+          <Val><![CDATA[Compiles the TypeScript project located at the specified path.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Kompiliert das am angegebenen Pfad befindliche TypeScript-Projekt]]></Val>
+            <Val><![CDATA[Kompiliert das sich am angegebenen Pfad befindliche TypeScript-Projekt.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Compiles the TypeScript project located at the specified path]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3680,10 +3770,13 @@
       </Item>
       <Item ItemId=";Compiles_the_current_project_with_additional_settings_6929" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Compiles the current project, with additional settings]]></Val>
+          <Val><![CDATA[Compiles the current project, with additional settings.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Kompiliert das aktuelle Projekt mit zusätzlichen Einstellungen]]></Val>
+            <Val><![CDATA[Kompiliert das aktuelle Projekt mit zusätzlichen Einstellungen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Compiles the current project, with additional settings]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3876,6 +3969,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Control_what_method_is_used_to_detect_module_format_JS_files_1475" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Control what method is used to detect module-format JS files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Steuern Sie, welche Methode zum Erkennen von JS-Dateien im Modulformat verwendet wird.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Conversion_of_type_0_to_type_1_may_be_a_mistake_because_neither_type_sufficiently_overlaps_with_the__2352" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Conversion of type '{0}' to type '{1}' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.]]></Val>
@@ -4011,15 +4113,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Convert_function_0_to_class_95002" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Convert function '{0}' to class]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Funktion "{0}" in Klasse konvertieren]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Convert_function_declaration_0_to_arrow_function_95106" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Convert function declaration '{0}' to arrow function]]></Val>
@@ -4061,6 +4154,15 @@
           <Val><![CDATA[Convert named export to default export]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Benannten Export in Standardexport konvertieren]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Convert_named_imports_to_default_import_95170" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Convert named imports to default import]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Konvertieren benannter Importe in Standardimporte]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -4110,11 +4212,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Convert_to_ES6_module_95017" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Convert_to_ES_module_95017" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Convert to ES6 module]]></Val>
+          <Val><![CDATA[Convert to ES module]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[In ES6-Modul konvertieren]]></Val>
+            <Val><![CDATA[In ES-Modul konvertieren]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -4548,6 +4650,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Decorator_function_return_type_0_is_not_assignable_to_type_1_1270" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Decorator function return type '{0}' is not assignable to type '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Rückgabetyp der Decorator-Funktion „{0}“ kann dem Typ „{1}“ nicht zugewiesen werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Decorator_function_return_type_is_0_but_is_expected_to_be_void_or_any_1271" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Decorator function return type is '{0}' but is expected to be 'void' or 'any'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Rückgabetyp der Decorator-Funktion ist „{0}“, es wird jedoch erwartet, dass er „void“ oder „any“ ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Decorators_are_not_valid_here_1206" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Decorators are not valid here.]]></Val>
@@ -4580,6 +4700,15 @@
           <Val><![CDATA[Decorators must precede the name and all keywords of property declarations.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Vor dem Namen und allen Schlüsselwörtern von Eigenschaftendeklarationen müssen Decorator-Elemente stehen.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Default_catch_clause_variables_as_unknown_instead_of_any_6803" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Default catch clause variables as 'unknown' instead of 'any'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Stellen Sie die Variablen der Catch-Klauseln standardmäßig als „unknown“ anstelle von „any“ ein.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -4638,11 +4767,32 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Delete_all_unused_param_tags_95172" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Delete all unused '@param' tags]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Alle nicht verwendeten "@param"-Tags löschen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Delete_the_outputs_of_all_projects_6365" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Delete the outputs of all projects]]></Val>
+          <Val><![CDATA[Delete the outputs of all projects.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ausgaben aller Projekte löschen]]></Val>
+            <Val><![CDATA[Löschen Sie die Ausgaben aller Projekte.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Delete the outputs of all projects]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Delete_unused_param_tag_0_95171" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Delete unused '@param' tag '{0}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nicht verwendete "@param"-Tag-"{0}" löschen]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -4676,10 +4826,13 @@
       </Item>
       <Item ItemId=";Deprecated_setting_Use_outFile_instead_6677" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Deprecated setting. Use `outFile` instead.]]></Val>
+          <Val><![CDATA[Deprecated setting. Use 'outFile' instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Veraltete Einstellung. Verwenden Sie stattdessen "outFile".]]></Val>
+            <Val><![CDATA[Veraltete Einstellung. Verwenden Sie stattdessen „outFile“.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Deprecated setting. Use `outFile` instead.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4728,15 +4881,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Did_you_mean_to_parenthesize_this_function_type_1360" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Did you mean to parenthesize this function type?]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Wollten Sie diesen Funktionstyp in Klammern einschließen?]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Did_you_mean_to_use_a_Colon_An_can_only_follow_a_property_name_when_the_containing_object_literal_is_1312" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Did you mean to use a ':'? An '=' can only follow a property name when the containing object literal is part of a destructuring pattern.]]></Val>
@@ -4773,6 +4917,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Directory_0_has_no_containing_package_json_scope_Imports_will_not_resolve_6270" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Directory '{0}' has no containing package.json scope. Imports will not resolve.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Verzeichnis "{0}" enthält keinen package.json-Bereich. Importe werden nicht aufgelöst.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Disable_adding_use_strict_directives_in_emitted_JavaScript_files_6669" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Disable adding 'use strict' directives in emitted JavaScript files.]]></Val>
@@ -4805,18 +4958,21 @@
       </Item>
       <Item ItemId=";Disable_emitting_declarations_that_have_internal_in_their_JSDoc_comments_6701" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Disable emitting declarations that have `@internal` in their JSDoc comments.]]></Val>
+          <Val><![CDATA[Disable emitting declarations that have '@internal' in their JSDoc comments.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Deaktivieren Sie das Ausgeben von Deklarationen mit "@internal" in ihren JSDoc-Kommentaren.]]></Val>
+            <Val><![CDATA[Deaktivieren Sie das Ausgeben von Deklarationen mit „@internal“ in ihren JSDoc-Kommentaren.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Disable emitting declarations that have `@internal` in their JSDoc comments.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Disable_emitting_file_from_a_compilation_6660" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Disable_emitting_files_from_a_compilation_6660" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Disable emitting file from a compilation.]]></Val>
+          <Val><![CDATA[Disable emitting files from a compilation.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Deaktivieren Sie das Ausgeben einer Datei aus einer Kompilierung.]]></Val>
+            <Val><![CDATA[Deaktivieren Sie das Ausgeben von Dateien aus einer Kompilierung.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -4832,10 +4988,13 @@
       </Item>
       <Item ItemId=";Disable_erasing_const_enum_declarations_in_generated_code_6682" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Disable erasing `const enum` declarations in generated code.]]></Val>
+          <Val><![CDATA[Disable erasing 'const enum' declarations in generated code.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Deaktivieren Sie das Löschen von "const enum"-Deklarationen in generiertem Code.]]></Val>
+            <Val><![CDATA[Deaktivieren Sie das Löschen von „const enum“-Deklarationen in generiertem Code.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Disable erasing `const enum` declarations in generated code.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4859,10 +5018,13 @@
       </Item>
       <Item ItemId=";Disable_generating_custom_helper_functions_like_extends_in_compiled_output_6661" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Disable generating custom helper functions like `__extends` in compiled output.]]></Val>
+          <Val><![CDATA[Disable generating custom helper functions like '__extends' in compiled output.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Deaktivieren Sie das Generieren von benutzerdefinierten Hilfsfunktionen wie "__extends" in der kompilierten Ausgabe.]]></Val>
+            <Val><![CDATA[Deaktivieren Sie das Generieren von benutzerdefinierten Hilfsfunktionen wie „__extends“ in der kompilierten Ausgabe.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Disable generating custom helper functions like `__extends` in compiled output.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4886,10 +5048,13 @@
       </Item>
       <Item ItemId=";Disable_preferring_source_files_instead_of_declaration_files_when_referencing_composite_projects_6620" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Disable preferring source files instead of declaration files when referencing composite projects]]></Val>
+          <Val><![CDATA[Disable preferring source files instead of declaration files when referencing composite projects.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Deaktivieren bevorzugter Quelldateien anstelle von Deklarationsdateien beim Verweisen auf zusammengesetzte Projekte]]></Val>
+            <Val><![CDATA[Deaktivieren Sie bevorzugte Quelldateien anstelle von Deklarationsdateien, wenn Sie auf zusammengesetzte Projekte verweisen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Disable preferring source files instead of declaration files when referencing composite projects]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4967,10 +5132,13 @@
       </Item>
       <Item ItemId=";Disable_wiping_the_console_in_watch_mode_6684" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Disable wiping the console in watch mode]]></Val>
+          <Val><![CDATA[Disable wiping the console in watch mode.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Deaktivieren Sie das Zurücksetzen der Konsole im Überwachungsmodus.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Disable wiping the console in watch mode]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -4985,10 +5153,13 @@
       </Item>
       <Item ItemId=";Disallow_import_s_require_s_or_reference_s_from_expanding_the_number_of_files_TypeScript_should_add__6672" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project.]]></Val>
+          <Val><![CDATA[Disallow 'import's, 'require's or '<reference>'s from expanding the number of files TypeScript should add to a project.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Hiermit wird verhindert, dass "import", "require" oder "<Reference>" die Anzahl der Dateien erweitern, die TypeScript einem Projekt hinzufügen soll.]]></Val>
+            <Val><![CDATA[Hiermit wird verhindert, dass „import“, „require“ oder „<reference>“ die Anzahl der Dateien erweitern, die TypeScript einem Projekt hinzufügen soll.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -5199,15 +5370,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Duplicate_identifier_super_Compiler_uses_super_to_capture_base_class_reference_2401" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Duplicate identifier '_super'. Compiler uses '_super' to capture base class reference.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Doppelter Bezeichner "_super". Der Compiler verwendet "_super" zum Erfassen des Basisklassenverweises.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Duplicate_identifier_this_Compiler_uses_variable_declaration_this_to_capture_this_reference_2399" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Duplicate identifier '_this'. Compiler uses variable declaration '_this' to capture 'this' reference.]]></Val>
@@ -5247,27 +5409,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Dynamic_import_cannot_have_type_arguments_1326" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Dynamic import cannot have type arguments.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der dynamische Import kann keine Typargumente aufweisen.]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Dynamic import cannot have type arguments]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Dynamic_import_must_have_one_specifier_as_an_argument_1324" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Dynamic import must have one specifier as an argument.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der dynamische Import benötigt einen Spezifizierer als Argument.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Dynamic_import_s_specifier_must_be_of_type_string_but_here_has_type_0_7036" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Dynamic import's specifier must be of type 'string', but here has type '{0}'.]]></Val>
@@ -5277,11 +5418,32 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Dynamic_imports_are_only_supported_when_the_module_flag_is_set_to_es2020_esnext_commonjs_amd_system__1323" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Dynamic_imports_are_only_supported_when_the_module_flag_is_set_to_es2020_es2022_esnext_commonjs_amd__1323" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Dynamic imports are only supported when the '--module' flag is set to 'es2020', 'esnext', 'commonjs', 'amd', 'system', or 'umd'.]]></Val>
+          <Val><![CDATA[Dynamic imports are only supported when the '--module' flag is set to 'es2020', 'es2022', 'esnext', 'commonjs', 'amd', 'system', 'umd', 'node16', or 'nodenext'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dynamische Importe werden nur unterstützt, wenn das Flag "--module" auf "es2020", "esnext", "commonjs", "amd", "system" oder "umd" festgelegt ist.]]></Val>
+            <Val><![CDATA[Dynamische Importe werden nur unterstützt, wenn das Flag „--module“ auf „es2020“, „es2022“, „esnext“, „commonjs“, „amd“, „system“, „umd“, „node16“ oder „ Knotenext'.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Dynamic imports are only supported when the '--module' flag is set to 'es2020', 'es2022', 'esnext', 'commonjs', 'amd', 'system', 'umd', 'node12', or 'nodenext'.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Dynamic_imports_can_only_accept_a_module_specifier_and_an_optional_assertion_as_arguments_1450" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamic imports can only accept a module specifier and an optional assertion as arguments]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dynamische Importe können nur einen Modulspezifizierer und eine optionale Assertion als Argumente akzeptieren.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Dynamic_imports_only_support_a_second_argument_when_the_module_option_is_set_to_esnext_node16_or_nod_1324" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dynamic imports only support a second argument when the '--module' option is set to 'esnext', 'node16', or 'nodenext'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dynamische Importe unterstützen nur ein zweites Argument, wenn die Option „--module“ auf „esnext“, „node16“ oder „nodenext“ gesetzt ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -5396,10 +5558,13 @@
       </Item>
       <Item ItemId=";Emit_additional_JavaScript_to_ease_support_for_importing_CommonJS_modules_This_enables_allowSyntheti_6626" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility.]]></Val>
+          <Val><![CDATA[Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Geben Sie ein zusätzliches JavaScript aus, um die Unterstützung beim Importieren von CommonJS-Modulen zu vereinfachen. Hiermit wird "allowSyntheticDefaultImports" für die Typkompatibilität aktiviert.]]></Val>
+            <Val><![CDATA[Geben Sie zusätzliches JavaScript aus, um die Unterstützung beim Importieren von CommonJS-Modulen zu vereinfachen. Dadurch wird „allowSyntheticDefaultImports“ für die Typkompatibilität aktiviert.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -5448,12 +5613,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Enable_color_and_formatting_in_output_to_make_compiler_errors_easier_to_read_6685" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Enable_color_and_formatting_in_TypeScript_s_output_to_make_compiler_errors_easier_to_read_6685" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Enable color and formatting in output to make compiler errors easier to read]]></Val>
+          <Val><![CDATA[Enable color and formatting in TypeScript's output to make compiler errors easier to read.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Farb-und Formatierungsvorgänge in der Ausgabe aktivieren, um Compilerfehler leichter lesbar zu machen]]></Val>
+            <Val><![CDATA[Aktivieren Sie Farbe und Formatierung in der TypeScript-Ausgabe, um Compilerfehler leichter zu lesen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Enable color and formatting in TypeScript's output to make compiler errors easier to read]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -5477,10 +5645,13 @@
       </Item>
       <Item ItemId=";Enable_error_reporting_for_expressions_and_declarations_with_an_implied_any_type_6665" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Enable error reporting for expressions and declarations with an implied `any` type..]]></Val>
+          <Val><![CDATA[Enable error reporting for expressions and declarations with an implied 'any' type.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Aktivieren Sie die Fehlerberichterstattung für Ausdrücke und Deklarationen mit einem impliziten "any"-Typ.]]></Val>
+            <Val><![CDATA[Aktivieren Sie die Fehlerberichterstattung für Ausdrücke und Deklarationen mit einem impliziten „any“-Typ.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Enable error reporting for expressions and declarations with an implied `any` type..]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -5502,9 +5673,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Enable_error_reporting_when_a_local_variables_aren_t_read_6675" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Enable_error_reporting_when_local_variables_aren_t_read_6675" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Enable error reporting when a local variables aren't read.]]></Val>
+          <Val><![CDATA[Enable error reporting when local variables aren't read.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Aktivieren Sie die Fehlerberichterstattung, wenn lokale Variablen nicht gelesen werden.]]></Val>
           </Tgt>
@@ -5513,10 +5684,13 @@
       </Item>
       <Item ItemId=";Enable_error_reporting_when_this_is_given_the_type_any_6668" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Enable error reporting when `this` is given the type `any`.]]></Val>
+          <Val><![CDATA[Enable error reporting when 'this' is given the type 'any'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Aktivieren Sie die Fehlerberichterstattung, wenn "this" den Typ "any" erhält.]]></Val>
+            <Val><![CDATA[Aktivieren Sie die Fehlerberichterstattung, wenn „this“ den Typ „any“ erhält.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Enable error reporting when `this` is given the type `any`.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -5531,19 +5705,13 @@
       </Item>
       <Item ItemId=";Enable_importing_json_files_6689" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Enable importing .json files]]></Val>
+          <Val><![CDATA[Enable importing .json files.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Importieren von JSON-Dateien aktivieren]]></Val>
+            <Val><![CDATA[Aktivieren Sie das Importieren von JSON-Dateien.]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Enable_incremental_compilation_6378" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Enable incremental compilation]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Inkrementelle Kompilierung aktivieren]]></Val>
-          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Enable importing .json files]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -5621,10 +5789,13 @@
       </Item>
       <Item ItemId=";Enable_verbose_logging_6713" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Enable verbose logging]]></Val>
+          <Val><![CDATA[Enable verbose logging.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ausführliche Protokollierung aktivieren]]></Val>
+            <Val><![CDATA[Aktivieren Sie die ausführliche Protokollierung.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Enable verbose logging]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -5633,15 +5804,6 @@
           <Val><![CDATA[Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ermöglicht Ausgabeinteroperabilität zwischen CommonJS- und ES-Modulen durch die Erstellung von Namespaceobjekten für alle Importe. Impliziert "AllowSyntheticDefaultImports".]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Enables_experimental_support_for_ES7_async_functions_6068" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Enables experimental support for ES7 async functions.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ermöglicht experimentelle Unterstützung für asynchrone ES7-Funktionen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -5666,10 +5828,13 @@
       </Item>
       <Item ItemId=";Enforces_using_indexed_accessors_for_keys_declared_using_an_indexed_type_6671" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Enforces using indexed accessors for keys declared using an indexed type]]></Val>
+          <Val><![CDATA[Enforces using indexed accessors for keys declared using an indexed type.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Erzwingt die Verwendung indizierter Accessoren für Schlüssel, die mithilfe eines indizierten Typs deklariert werden.]]></Val>
+            <Val><![CDATA[Erzwingt die Verwendung indizierter Accessoren für Schlüssel, die mithilfe eines indizierten Typs deklariert wurden.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Enforces using indexed accessors for keys declared using an indexed type]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -5802,20 +5967,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Enum_type_0_circularly_references_itself_2586" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Enum type '{0}' circularly references itself.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Enumerationstyp "{0}" verweist zirkulär auf sich selbst.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Enum_type_0_has_members_with_initializers_that_are_not_literals_2535" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Enum type '{0}' has members with initializers that are not literals.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Enumerationstyp "{0}" weist Member mit Initialisierern auf, die keine Literale sind.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Errors_Files_6041" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Errors  Files]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fehlerdateien]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -5879,6 +6044,15 @@
           <Val><![CDATA[Expected {0} type arguments; provide these with an '@extends' tag.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} Typargumente erwartet; geben Sie diese mit einem @extends-Tag an.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Expected_1_argument_but_got_0_new_Promise_needs_a_JSDoc_hint_to_produce_a_resolve_that_can_be_called_2810" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Expected 1 argument, but got 0. 'new Promise()' needs a JSDoc hint to produce a 'resolve' that can be called without arguments.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[1 Argument erwartet, aber 0 erhalten. „new Promise()“ benötigt einen JSDoc-Hinweis, um einen „resolve“ zu erzeugen, der ohne Argumente aufgerufen werden kann.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -5997,20 +6171,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Exported_external_package_typings_file_0_is_not_a_module_Please_contact_the_package_author_to_update_2656" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Export_specifier_0_does_not_exist_in_package_json_scope_at_path_1_6276" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Exported external package typings file '{0}' is not a module. Please contact the package author to update the package definition.]]></Val>
+          <Val><![CDATA[Export specifier '{0}' does not exist in package.json scope at path '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die exportierte externe Pakettypisierungsdatei "{0}" ist kein Modul. Bitte wenden Sie sich an den Paketautor, um die Paketdefinition zu aktualisieren.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Exported_external_package_typings_file_cannot_contain_tripleslash_references_Please_contact_the_pack_2654" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Exported external package typings file cannot contain tripleslash references. Please contact the package author to update the package definition.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Exportierte externe Pakettypisierungen dürfen keine Verweise mit drei Schrägstrichen enthalten. Bitte wenden Sie sich an den Paketautor, um die Paketdefinition zu aktualisieren.]]></Val>
+            <Val><![CDATA[Der Exportspezifizierer "{0}" ist im package.json-Bereich beim Pfad "{1}" nicht vorhanden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6110,15 +6275,6 @@
           <Val><![CDATA[Expression resolves to '_super' that compiler uses to capture base class reference.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Ausdruck wird in "_super" aufgelöst. Damit erfasst der Compiler den Basisklassenverweis.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Expression_resolves_to_variable_declaration_0_that_compiler_uses_to_support_async_functions_2521" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Expression resolves to variable declaration '{0}' that compiler uses to support async functions.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Ausdruck wird in die Variablendeklaration "{0}" aufgelöst, die der Compiler verwendet, um asynchrone Funktionen zu unterstützen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6375,11 +6531,47 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";File_is_a_CommonJS_module_it_may_be_converted_to_an_ES6_module_80001" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";File_is_CommonJS_module_because_0_does_not_have_field_type_1460" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[File is a CommonJS module; it may be converted to an ES6 module.]]></Val>
+          <Val><![CDATA[File is CommonJS module because '{0}' does not have field "type"]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Datei ist ein CommonJS-Modul, sie kann in ein ES6-Modul konvertiert werden.]]></Val>
+            <Val><![CDATA[Die Datei ist ein CommonJS-Modul, da '{0}' nicht das Feld „Typ“ aufweist]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";File_is_CommonJS_module_because_0_has_field_type_whose_value_is_not_module_1459" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[File is CommonJS module because '{0}' has field "type" whose value is not "module"]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Datei ist ein CommonJS-Modul, da '{0}' das Feld „Typ“ aufweist, dessen Wert nicht „Modul“ ist]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";File_is_CommonJS_module_because_package_json_was_not_found_1461" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[File is CommonJS module because 'package.json' was not found]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Datei ist ein CommonJS-Modul, da „package.json“ nicht gefunden wurde]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";File_is_ECMAScript_module_because_0_has_field_type_with_value_module_1458" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[File is ECMAScript module because '{0}' has field "type" with value "module"]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Datei ist ein ECMAScript-Modul, da '{0}' das Feld „Typ“ mit dem Wert „Modul“ aufweist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";File_is_a_CommonJS_module_it_may_be_converted_to_an_ES_module_80001" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[File is a CommonJS module; it may be converted to an ES module.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Datei ist ein CommonJS-Modul und kann möglicherweise in ein ES-Modul konvertiert werden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6615,6 +6807,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Found_0_errors_in_1_files_6261" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Found {0} errors in {1} files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[In {1} Dateien wurden {0} Fehler gefunden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Found_0_errors_in_the_same_file_starting_at_Colon_1_6260" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Found {0} errors in the same file, starting at: {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Es wurden {0} Fehler in derselben Datei gefunden, beginnend bei: {1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Found_1_error_6216" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Found 1 error.]]></Val>
@@ -6629,6 +6839,15 @@
           <Val><![CDATA[Found 1 error. Watching for file changes.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[1 Fehler gefunden. Es wird auf Dateiänderungen überwacht.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Found_1_error_in_1_6259" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Found 1 error in {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[1 Fehler in {1} gefunden]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6867,15 +7086,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Generators_are_only_available_when_targeting_ECMAScript_2015_or_higher_1220" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Generators are only available when targeting ECMAScript 2015 or higher.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Generatoren sind nur verfügbar, wenn das Ziel ECMAScript 2015 oder höher ist.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Generic_type_0_requires_1_type_argument_s_2314" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Generic type '{0}' requires {1} type argument(s).]]></Val>
@@ -6950,10 +7160,13 @@
       </Item>
       <Item ItemId=";Have_recompiles_in_projects_that_use_incremental_and_watch_mode_assume_that_changes_within_a_file_wi_6606" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Have recompiles in projects that use `incremental` and `watch` mode assume that changes within a file will only affect files directly depending on it.]]></Val>
+          <Val><![CDATA[Have recompiles in projects that use 'incremental' and 'watch' mode assume that changes within a file will only affect files directly depending on it.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Bei Neukompilierungen in Projekten, die den Modus "incremental" und "watch" verwenden, wird davon ausgegangen, dass Änderungen innerhalb einer Datei sich nur auf die direkt davon abhängigen Dateien auswirken.]]></Val>
+            <Val><![CDATA[Bei Neukompilierungen in Projekten, die die Modi „incremental“ und „watch“ verwenden, wird davon ausgegangen, dass Änderungen innerhalb einer Datei sich nur direkt auf Dateien auswirken.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Have recompiles in projects that use `incremental` and `watch` mode assume that changes within a file will only affect files directly depending on it.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -7032,6 +7245,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Identifier_or_string_literal_expected_1478" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Identifier or string literal expected.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Bezeichner oder Zeichenfolgenliteral erwartet.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";If_the_0_package_actually_exposes_this_module_consider_sending_a_pull_request_to_amend_https_Colon_S_7040" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[If the '{0}' package actually exposes this module, consider sending a pull request to amend 'https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/{1}']]></Val>
@@ -7041,6 +7263,15 @@
           <Prev Cat="Text">
             <Val><![CDATA[If the '{0}' package actually exposes this module, consider sending a pull request to amend 'https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/{1}`]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";If_the_0_package_actually_exposes_this_module_try_adding_a_new_declaration_d_ts_file_containing_decl_7058" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[If the '{0}' package actually exposes this module, try adding a new declaration (.d.ts) file containing `declare module '{1}';`]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wenn das Paket "{0}" dieses Modul tatsächlich verfügbar macht, versuchen Sie, eine neue Deklarationsdatei (.d.ts) hinzuzufügen, die Declare-Modul "{1}" enthält.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -7058,10 +7289,13 @@
       </Item>
       <Item ItemId=";Ignoring_tsconfig_json_compiles_the_specified_files_with_default_compiler_options_6924" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Ignoring tsconfig.json, compiles the specified files with default compiler options]]></Val>
+          <Val><![CDATA[Ignoring tsconfig.json, compiles the specified files with default compiler options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ignoriert tsconfig.json und kompiliert die angegebenen Dateien mit den Standard-Compileroptionen]]></Val>
+            <Val><![CDATA[Ignoriert tsconfig.json und kompiliert die angegebenen Dateien mit den Standardkompilieroptionen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Ignoring tsconfig.json, compiles the specified files with default compiler options]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -7125,15 +7359,48 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Import_0_from_module_1_90013" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Import_0_from_1_90013" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Import '{0}' from module "{1}"]]></Val>
+          <Val><![CDATA[Import '{0}' from "{1}"]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" aus dem Modul "{1}" importieren]]></Val>
+            <Val><![CDATA["{0}" aus "{1}" importieren]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Import '{0}' from module "{1}".]]></Val>
-          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Import_assertion_values_must_be_string_literal_expressions_2837" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import assertion values must be string literal expressions.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Importassertionswerte müssen Zeichenfolgenliteralausdrücke sein.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Import_assertions_are_not_allowed_on_statements_that_transpile_to_commonjs_require_calls_2836" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import assertions are not allowed on statements that transpile to commonjs 'require' calls.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Importassertionen sind für Anweisungen, die in „require“-Aufrufe von CommonJs transpilieren, nicht zulässig.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Import_assertions_are_only_supported_when_the_module_option_is_set_to_esnext_or_nodenext_2821" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import assertions are only supported when the '--module' option is set to 'esnext' or 'nodenext'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Importassertionen werden nur unterstützt, wenn die Option „--module“ auf „esnext“ oder „nodenext“ festgelegt ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Import_assertions_cannot_be_used_with_type_only_imports_or_exports_2822" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import assertions cannot be used with type-only imports or exports.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Importassertionen können nicht mit rein typbasierten Importen oder Exporten verwendet werden.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -7176,15 +7443,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Import_default_0_from_module_1_90032" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Import default '{0}' from module "{1}"]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Standard "{0}" aus Modul "{1}" importieren]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Import_emit_helpers_from_tslib_6139" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Import emit helpers from 'tslib'.]]></Val>
@@ -7220,6 +7478,15 @@
           <Val><![CDATA[Import or export declaration in an ambient module declaration cannot reference module through relative module name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Import- oder Exportdeklaration in einer Umgebungsmoduldeklaration dürfen nicht über den relativen Modulnamen auf ein Modul verweisen.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Import_specifier_0_does_not_exist_in_package_json_scope_at_path_1_6271" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Import specifier '{0}' does not exist in package.json scope at path '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Importspezifizierer "{0}" ist im package.json-Bereich beim Pfad "{1}" nicht vorhanden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -7341,11 +7608,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Include_undefined_in_index_signature_results_6716" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Includes_imports_of_types_referenced_by_0_90054" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Include 'undefined' in index signature results]]></Val>
+          <Val><![CDATA[Includes imports of types referenced by '{0}']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["Nicht definiert" in Indexsignaturergebnisse einbeziehen]]></Val>
+            <Val><![CDATA[Schließt Importe von Typen ein, auf die von „{0}“ verwiesen wird]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -7608,6 +7875,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Invalid_import_specifier_0_has_no_possible_resolutions_6272" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid import specifier '{0}' has no possible resolutions.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der ungültige Importbezeichner "{0}" weist keine möglichen Auflösungen auf.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Invalid_module_name_in_augmentation_Module_0_resolves_to_an_untyped_module_at_1_which_cannot_be_augm_2665" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid module name in augmentation. Module '{0}' resolves to an untyped module at '{1}', which cannot be augmented.]]></Val>
@@ -7626,20 +7902,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Invalid_optional_chain_from_new_expression_Did_you_mean_to_call_0_1209" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid optional chain from new expression. Did you mean to call '{0}()'?]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ungültige optionale Kette aus neuem Ausdruck. Wollten Sie '{0}()' anrufen?]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Invalid_reference_directive_syntax_1084" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid 'reference' directive syntax.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ungültige Syntax der reference-Direktive.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Invalid_use_of_0_Class_definitions_are_automatically_in_strict_mode_1210" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Invalid use of '{0}'. Class definitions are automatically in strict mode.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ungültige Verwendung von "{0}". Klassendefinitionen befinden sich automatisch im Strict-Modus.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -7779,15 +8055,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";JSDoc_type_0_circularly_references_itself_2587" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[JSDoc type '{0}' circularly references itself.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der JSDoc-Typ "{0}" verweist zirkulär auf sich selbst.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";JSDoc_typedef_tag_should_either_have_a_type_annotation_or_be_followed_by_property_or_member_tags_8021" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[JSDoc '@typedef' tag should either have a type annotation or be followed by '@property' or '@member' tags.]]></Val>
@@ -7815,15 +8082,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";JSX_attribute_expected_17003" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[JSX attribute expected.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ein JSX-Attribut wurde erwartet.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";JSX_attributes_must_only_be_assigned_a_non_empty_expression_17000" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[JSX attributes must only be assigned a non-empty 'expression'.]]></Val>
@@ -7838,15 +8096,6 @@
           <Val><![CDATA[JSX element '{0}' has no corresponding closing tag.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das JSX-Element "{0}" weist kein entsprechendes schließendes Tag auf.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";JSX_element_attributes_type_0_may_not_be_a_union_type_2600" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[JSX element attributes type '{0}' may not be a union type.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der JSX-Elementattributtyp "{0}" darf kein Union-Typ sein.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -7889,15 +8138,6 @@
           <Val><![CDATA[JSX element type '{0}' does not have any construct or call signatures.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der JSX-Elementtyp "{0}"weist keine Konstrukt- oder Aufrufsignaturen auf.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";JSX_element_type_0_is_not_a_constructor_function_for_JSX_elements_2605" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[JSX element type '{0}' is not a constructor function for JSX elements.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der JSX-Elementtyp "{0}" ist keine Konstruktorfunktion für JSX-Elemente.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -8013,15 +8253,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Language_service_is_disabled_9004" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Language service is disabled.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Sprachdienst ist deaktiviert.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Left_side_of_comma_operator_is_unused_and_has_no_side_effects_2695" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Left side of comma operator is unused and has no side effects.]]></Val>
@@ -8067,20 +8298,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";List_of_file_name_suffixes_to_search_when_resolving_a_module_6931" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List of file name suffixes to search when resolving a module.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Liste der Dateinamensuffixe, die beim Auflösen eines Moduls gesucht werden sollen.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";List_of_folders_to_include_type_definitions_from_6161" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[List of folders to include type definitions from.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Liste der Ordner, aus denen Typendefinitionen einbezogen werden sollen.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";List_of_language_service_plugins_6181" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[List of language service plugins.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Liste der Sprachdienst-Plug-ins.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -8135,10 +8366,13 @@
       </Item>
       <Item ItemId=";Log_paths_used_during_the_moduleResolution_process_6706" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Log paths used during the `moduleResolution` process.]]></Val>
+          <Val><![CDATA[Log paths used during the 'moduleResolution' process.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Protokollpfade, die während des "moduleResolution"-Prozesses verwendet werden.]]></Val>
+            <Val><![CDATA[Protokollpfade, die während des „moduleResolution“-Prozesses verwendet werden.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Log paths used during the `moduleResolution` process.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -8201,6 +8435,15 @@
           <Val><![CDATA[Mapped object type implicitly has an 'any' template type.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der zugeordnete Objekttyp weist implizit einen any-Vorlagentyp auf.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Matched_by_default_include_pattern_Asterisk_Asterisk_Slash_Asterisk_1457" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Matched by default include pattern '**/*']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Standardmäßig zugeordnetes Includemuster „**/*“]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -8309,6 +8552,15 @@
           <Val><![CDATA[Module '{0}' can only be default-imported using the '{1}' flag]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Modul "{0}" kann nur mit dem Flag "{1}" als Standard importiert werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Module_0_cannot_be_imported_using_this_construct_The_specifier_only_resolves_to_an_ES_module_which_c_1471" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Module '{0}' cannot be imported using this construct. The specifier only resolves to an ES module, which cannot be imported synchronously. Use dynamic import instead.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Modul "{0}" kann nicht mithilfe dieses Konstrukts importiert werden. Der Spezifizierer wird nur in ein ES-Modul aufgelöst, das nicht synchron importiert werden kann. Verwenden Sie stattdessen den dynamischen Import.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -8967,18 +9219,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Only_identifiers_Slashqualified_names_with_optional_type_arguments_are_currently_supported_in_a_clas_9002" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Only identifiers/qualified-names with optional type arguments are currently supported in a class 'extends' clause.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Derzeit werden nur Bezeichner/qualifizierte Namen mit optionalen Typargumenten in den "extends"-Klauseln einer Klasse unterstützt.]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Only identifiers/qualified-names with optional type arguments are currently supported in a class 'extends' clauses.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Only_named_exports_may_use_export_type_1383" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Only named exports may use 'export type'.]]></Val>
@@ -9114,15 +9354,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Option_0_should_have_array_of_strings_as_a_value_6103" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Option '{0}' should have array of strings as a value.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Option "{0}" muss ein Zeichenfolgenarray als Wert aufweisen.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Option_build_must_be_the_first_command_line_argument_6369" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Option '--build' must be the first command line argument.]]></Val>
@@ -9158,6 +9389,15 @@
           <Val><![CDATA[Option 'preserveConstEnums' cannot be disabled when 'isolatedModules' is enabled.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Option "preserveConstEnums" kann nicht deaktiviert werden, wenn "isolatedModules" aktiviert ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_preserveValueImports_can_only_be_used_when_module_is_set_to_es2015_or_later_5095" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Option 'preserveValueImports' can only be used when 'module' is set to 'es2015' or later.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Option „preserveValueImports“ kann nur verwendet werden, wenn „module“ auf „es2015“ oder höher festgelegt ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -9744,6 +9984,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Preserve_unused_imported_values_in_the_JavaScript_output_that_would_otherwise_be_removed_1449" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Preserve unused imported values in the JavaScript output that would otherwise be removed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Behalten Sie nicht verwendete importierte Werte in der JavaScript-Ausgabe bei, die andernfalls entfernt werden würden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Print_all_of_the_files_read_during_the_compilation_6653" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Print all of the files read during the compilation.]]></Val>
@@ -9861,6 +10110,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Private_identifiers_are_only_allowed_in_class_bodies_and_may_only_be_used_as_part_of_a_class_member__1451" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Private identifiers are only allowed in class bodies and may only be used as part of a class member declaration, property access, or on the left-hand-side of an 'in' expression]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Private Bezeichner sind nur in Klassentexten zulässig und dürfen nur als Teil einer Klassenmitgliedsdeklaration, eines Eigenschaftszugriffs oder auf der linken Seite eines in-Ausdrucks verwendet werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Private_identifiers_are_only_available_when_targeting_ECMAScript_2015_and_higher_18028" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Private identifiers are only available when targeting ECMAScript 2015 and higher.]]></Val>
@@ -9918,6 +10176,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Project_0_is_out_of_date_because_buildinfo_file_1_indicates_that_some_of_the_changes_were_not_emitte_6399" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project '{0}' is out of date because buildinfo file '{1}' indicates that some of the changes were not emitted]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Projekt "{0}" ist veraltet, da die Buildinfodatei "{1}" angibt, dass einige der Änderungen nicht ausgegeben wurden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Project_0_is_out_of_date_because_its_dependency_1_is_out_of_date_6353" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Project '{0}' is out of date because its dependency '{1}' is out of date]]></Val>
@@ -9927,11 +10194,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Project_0_is_out_of_date_because_oldest_output_1_is_older_than_newest_input_2_6350" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Project_0_is_out_of_date_because_output_1_is_older_than_input_2_6350" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Project '{0}' is out of date because oldest output '{1}' is older than newest input '{2}']]></Val>
+          <Val><![CDATA[Project '{0}' is out of date because output '{1}' is older than input '{2}']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekt "{0}" ist veraltet, weil die älteste Ausgabe "{1}" älter ist als die neueste Eingabe "{2}".]]></Val>
+            <Val><![CDATA[Das Projekt "{0}" ist veraltet, weil die Ausgabe "{1}" älter ist als die Eingabe "{2}"]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -9972,11 +10239,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Project_0_is_up_to_date_because_newest_input_1_is_older_than_oldest_output_2_6351" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Project_0_is_up_to_date_because_newest_input_1_is_older_than_output_2_6351" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Project '{0}' is up to date because newest input '{1}' is older than oldest output '{2}']]></Val>
+          <Val><![CDATA[Project '{0}' is up to date because newest input '{1}' is older than output '{2}']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekt "{0}" ist auf dem neuesten Stand, weil die neueste Eingabe "{1}" älter ist als die älteste Ausgabe "{2}".]]></Val>
+            <Val><![CDATA[Projekt "{0}" ist auf dem neuesten Stand, weil die neueste Eingabe "{1}" älter ist als die Ausgabe "{2}".]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Project_0_is_up_to_date_but_needs_to_update_timestamps_of_output_files_that_are_older_than_input_fil_6400" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project '{0}' is up to date but needs to update timestamps of output files that are older than input files]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Projekt "{0}" ist aktuell, muss jedoch Zeitstempel von Ausgabedateien aktualisieren, die älter als Eingabedateien sind.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10017,15 +10293,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Projects_to_reference_6300" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Projects to reference]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zu referenzierende Projekte]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Property_0_cannot_have_an_initializer_because_it_is_marked_abstract_1267" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Property '{0}' cannot have an initializer because it is marked abstract.]]></Val>
@@ -10040,15 +10307,6 @@
           <Val><![CDATA[Property '{0}' comes from an index signature, so it must be accessed with ['{0}']5D;.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Eigenschaft "{0}" stammt aus einer Indexsignatur. Der Zugriff muss daher mit ["{0}"]5D; erfolgen.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Property_0_does_not_exist_on_const_enum_1_2479" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Property '{0}' does not exist on 'const' enum '{1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Eigenschaft "{0}" ist für die const-Enumeration "{1}" nicht vorhanden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10203,15 +10461,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Property_0_is_incompatible_with_rest_element_type_2573" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Property '{0}' is incompatible with rest element type.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Eigenschaft "{0}" ist nicht mit dem rest-Elementtyp kompatibel.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Property_0_is_missing_in_type_1_2324" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Property '{0}' is missing in type '{1}'.]]></Val>
@@ -10316,15 +10565,6 @@
           <Val><![CDATA[Property '{0}' is used before its initialization.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Eigenschaft "{0}" wird vor ihrer Initialisierung verwendet.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Property_0_may_not_be_used_in_a_static_property_s_initializer_in_the_same_class_when_target_is_esnex_2810" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Property '{0}' may not be used in a static property's initializer in the same class when 'target' is 'esnext' and 'useDefineForClassFields' is 'false'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Eigenschaft "{0}" darf nicht im Initialisierer einer statischen Eigenschaft in derselben Klasse verwendet werden, wenn "target" auf "esnext" und "useDefineForClassFields" auf FALSE festgelegt ist.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10442,15 +10682,6 @@
           <Val><![CDATA[Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Bieten Sie vollständige Unterstützung für Iterablen in "for-of", Verteilung und Destrukturierung mit dem Ziel "ES5" oder "ES3".]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Provides_a_root_package_name_when_using_outFile_with_declarations_1390" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Provides a root package name when using outFile with declarations.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Stellt einen Stammpaketnamen bereit, wenn "outFile" mit Deklarationen verwendet wird.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10574,10 +10805,13 @@
       </Item>
       <Item ItemId=";Raise_an_error_when_a_function_parameter_isn_t_read_6676" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Raise an error when a function parameter isn't read]]></Val>
+          <Val><![CDATA[Raise an error when a function parameter isn't read.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Auslösen eines Fehlers, wenn ein Funktionsparameter nicht gelesen wird]]></Val>
+            <Val><![CDATA[Löst einen Fehler aus, wenn ein Funktionsparameter nicht gelesen wird.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Raise an error when a function parameter isn't read]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -10650,6 +10884,30 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Referenziert über "{0}" aus der Datei "{1}"]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Relative_import_paths_need_explicit_file_extensions_in_EcmaScript_imports_when_moduleResolution_is_n_2834" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Relative import paths need explicit file extensions in EcmaScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Relative Importpfade erfordern explizite Dateierweiterungen in EcmaScript-Importen, wenn „--moduleResolution“ „node16“ oder „nodenext“ ist. Erwägen Sie, dem Importpfad eine Erweiterung hinzuzufügen.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Relative import paths need explicit file extensions in EcmaScript imports when '--moduleResolution' is 'node12' or 'nodenext'. Consider adding an extension to the import path.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Relative_import_paths_need_explicit_file_extensions_in_EcmaScript_imports_when_moduleResolution_is_n_2835" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Relative import paths need explicit file extensions in EcmaScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '{0}'?]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Relative Importpfade erfordern explizite Dateierweiterungen in EcmaScript-Importen, wenn „--moduleResolution“ „node16“ oder „nodenext“ ist. Hast du gemeint '{0}'?]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Relative import paths need explicit file extensions in EcmaScript imports when '--moduleResolution' is 'node12' or 'nodenext'. Did you mean '{0}'?]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -10779,6 +11037,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Remove_type_from_import_declaration_from_0_90055" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Remove 'type' from import declaration from "{0}"]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„type“ aus Importdeklaration aus „{0}“ entfernen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Remove_type_from_import_of_0_from_1_90056" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Remove 'type' from import of '{0}' from "{1}"]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„type“ aus Import von „{0}“ aus „{1}“ entfernen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Remove_type_parameters_90012" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Remove type parameters]]></Val>
@@ -10847,6 +11123,15 @@
           <Val><![CDATA[Remove variable statement]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Variablenanweisung entfernen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Rename_param_tag_name_0_to_1_95173" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Rename '@param' tag name '{0}' to '{1}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Tagnamen "@param" "{0}" in "{1}" umbenennen]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10977,15 +11262,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Resolving_from_node_modules_folder_6118" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Resolving from node_modules folder...]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Auflösen aus dem Ordner "node_modules"...]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Resolving_module_0_from_1_6086" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[======== Resolving module '{0}' from '{1}'. ========]]></Val>
@@ -11061,15 +11337,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Resolving_using_primary_search_paths_6117" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Resolving using primary search paths...]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Auflösung mithilfe primärer Suchpfade...]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Resolving_with_primary_search_path_0_6121" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Resolving with primary search path '{0}'.]]></Val>
@@ -11096,15 +11363,6 @@
           <Val><![CDATA[Rest parameter '{0}' implicitly has an 'any[]5D;' type, but a better type may be inferred from usage.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der rest-Parameter "{0}" weist implizit einen Typ "any[]5D;" auf, möglicherweise kann jedoch ein besserer Typ aus der Syntax abgeleitet werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Rest_signatures_are_incompatible_2572" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Rest signatures are incompatible.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die rest-Signaturen sind nicht kompatibel.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11745,24 +12003,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Specialized_overload_signature_is_not_assignable_to_any_non_specialized_signature_2382" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Specialized overload signature is not assignable to any non-specialized signature.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Eine spezialisierte Überladungssignatur kann keiner nicht spezialisierten Signatur zugewiesen werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Specifier_of_dynamic_import_cannot_be_spread_element_1325" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Specifier of dynamic import cannot be spread element.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Spezifizierer des dynamischen Imports darf kein Spread-Element sein.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Specify_ECMAScript_target_version_6015" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Specify ECMAScript target version.]]></Val>
@@ -11783,10 +12023,13 @@
       </Item>
       <Item ItemId=";Specify_a_file_that_bundles_all_outputs_into_one_JavaScript_file_If_declaration_is_true_also_designa_6679" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output.]]></Val>
+          <Val><![CDATA[Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Geben Sie eine Datei an, die alle Ausgaben in einer JavaScript-Datei bündelt. Wenn "declaration" TRUE ist, wird auch eine Datei festgelegt, die alle .d.ts-Ausgaben bündelt.]]></Val>
+            <Val><![CDATA[Geben Sie eine Datei an, die alle Ausgaben in einer JavaScript-Datei bündelt. Wenn „declaration“ TRUE ist, wird auch eine Datei festgelegt, die alle „.d.ts“-Ausgaben bündelt.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -11846,10 +12089,13 @@
       </Item>
       <Item ItemId=";Specify_emit_Slashchecking_behavior_for_imports_that_are_only_used_for_types_6718" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specify emit/checking behavior for imports that are only used for types]]></Val>
+          <Val><![CDATA[Specify emit/checking behavior for imports that are only used for types.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Geben Sie das Ausgabe-/Überprüfungsverhalten für Importe an, die nur für Typen verwendet werden.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specify emit/checking behavior for imports that are only used for types]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -11918,19 +12164,25 @@
       </Item>
       <Item ItemId=";Specify_module_specifier_used_to_import_the_JSX_factory_functions_when_using_jsx_Colon_react_jsx_Ast_6649" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx*`.`]]></Val>
+          <Val><![CDATA[Specify module specifier used to import the JSX factory functions when using 'jsx: react-jsx*'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Geben Sie den Modulspezifizierer an, der zum Importieren der JSX-Factoryfunktionen verwendet wird, wenn "jsx: react-jsx*" verwendet wird.]]></Val>
+            <Val><![CDATA[Geben Sie den Modulspezifizierer an, der zum Importieren der JSX-Factoryfunktionen verwendet wird, wenn Sie „jsx: react-jsx*“ verwenden.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx*`.`]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Specify_multiple_folders_that_act_like_Slashnode_modules_Slash_types_6710" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specify multiple folders that act like `./node_modules/@types`.]]></Val>
+          <Val><![CDATA[Specify multiple folders that act like './node_modules/@types'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Geben Sie mehrere Ordner an, die als "./node_modules/@types" fungieren.]]></Val>
+            <Val><![CDATA[Geben Sie mehrere Ordner an, die als „./node_modules/@types“ fungieren.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specify multiple folders that act like `./node_modules/@types`.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -12008,10 +12260,13 @@
       </Item>
       <Item ItemId=";Specify_the_JSX_factory_function_used_when_targeting_React_JSX_emit_e_g_React_createElement_or_h_6647" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h']]></Val>
+          <Val><![CDATA[Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Geben Sie die JSX-Factoryfunktion an, die für eine react-JSX-Ausgabe verwendet werden soll, z. B. "React.createElement" oder "h".]]></Val>
+            <Val><![CDATA[Geben Sie die JSX-Factoryfunktion an, die verwendet wird, wenn Sie die JSX-Ausgabe „react“ als Ziel verwenden, z. B. „React.createElement“ oder „h“.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h']]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -12042,15 +12297,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Specify_the_folder_for_tsbuildinfo_incremental_compilation_files_6707" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Specify the folder for .tsbuildinfo incremental compilation files.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Geben Sie den Ordner für .tsbuildinfo inkrementelle Kompilierungsdateien an.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Specify_the_location_where_debugger_should_locate_TypeScript_files_instead_of_source_locations_6004" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Specify the location where debugger should locate TypeScript files instead of source locations.]]></Val>
@@ -12071,10 +12317,13 @@
       </Item>
       <Item ItemId=";Specify_the_maximum_folder_depth_used_for_checking_JavaScript_files_from_node_modules_Only_applicabl_6656" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specify the maximum folder depth used for checking JavaScript files from `node_modules`. Only applicable with `allowJs`.]]></Val>
+          <Val><![CDATA[Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Geben Sie die maximale Ordnertiefe für die Überprüfung von JavaScript-Dateien von "node_modules" an. Nur gültig für "allowJs".]]></Val>
+            <Val><![CDATA[Geben Sie die maximale Ordnertiefe an, die zum Überprüfen von JavaScript-Dateien aus „node_modules“ verwendet wird. Gilt nur für „allowJs“.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specify the maximum folder depth used for checking JavaScript files from `node_modules`. Only applicable with `allowJs`.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -12092,10 +12341,13 @@
       </Item>
       <Item ItemId=";Specify_the_object_invoked_for_createElement_This_only_applies_when_targeting_react_JSX_emit_6686" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specify the object invoked for `createElement`. This only applies when targeting `react` JSX emit.]]></Val>
+          <Val><![CDATA[Specify the object invoked for 'createElement'. This only applies when targeting 'react' JSX emit.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Geben Sie das Objekt an, das für "createElement" aufgerufen wird. Dies gilt nur, wenn die JSX-Ausgabe "react" als Ziel verwendet wird.]]></Val>
+            <Val><![CDATA[Geben Sie das Objekt an, das für „createElement“ aufgerufen wird. Dies gilt nur, wenn die JSX-Ausgabe „react“ als Ziel verwendet wird.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specify the object invoked for `createElement`. This only applies when targeting `react` JSX emit.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -12104,6 +12356,15 @@
           <Val><![CDATA[Specify the output directory for generated declaration files.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Geben Sie das Ausgabeverzeichnis für generierte Deklarationsdateien an.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Specify_the_path_to_tsbuildinfo_incremental_compilation_file_6707" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Specify the path to .tsbuildinfo incremental compilation file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Geben Sie den Pfad zu inkrementelle Kompilierungsdateien .tsbuildinfo an.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -12230,15 +12491,6 @@
           <Val><![CDATA[Statements are not allowed in ambient contexts.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Anweisungen sind in Umgebungskontexten unzulässig.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Static_fields_with_private_names_can_t_have_initializers_when_the_useDefineForClassFields_flag_is_no_2805" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Static fields with private names can't have initializers when the '--useDefineForClassFields' flag is not specified with a '--target' of 'esnext'. Consider adding the '--useDefineForClassFields' flag.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Statische Felder mit privaten Namen dürfen keine Initialisierer enthalten, wenn das Flag "--useDefineForClassFields" nicht mit dem Wert "esnext" für "--target" angegeben wird. Erwägen Sie, das Flag "--useDefineForClassFields" hinzuzufügen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -12383,10 +12635,13 @@
       </Item>
       <Item ItemId=";Suppress_noImplicitAny_errors_when_indexing_objects_that_lack_index_signatures_6703" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Suppress `noImplicitAny` errors when indexing objects that lack index signatures.]]></Val>
+          <Val><![CDATA[Suppress 'noImplicitAny' errors when indexing objects that lack index signatures.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Unterdrücken Sie "noImplicitAny"-Fehler beim Indizieren von Objekten ohne Indexsignaturen.]]></Val>
+            <Val><![CDATA[Unterdrücken Sie „noImplicitAny“-Fehler beim Indizieren von Objekten ohne Indexsignaturen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Suppress `noImplicitAny` errors when indexing objects that lack index signatures.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -12395,15 +12650,6 @@
           <Val><![CDATA[Switch each misused '{0}' to '{1}']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Jedes falsch verwendete {0}-Element in "{1}" ändern]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Symbol_reference_does_not_refer_to_the_global_Symbol_constructor_object_2470" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['Symbol' reference does not refer to the global Symbol constructor object.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Symbol-Verweis verweist nicht auf das globale Symbolkonstruktorobjekt.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -12543,18 +12789,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";The_bundledPackageName_option_must_be_provided_when_using_outFile_and_node_module_resolution_with_de_1391" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The 'bundledPackageName' option must be provided when using outFile and node module resolution with declaration emit.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Option "bundledPackageName" muss angegeben werden, wenn "outFile" und die Knotenmodulauflösung mit der Deklarationsausgabe verwendet werden.]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The `bundledPackageName` option must be provided when using outFile and node module resolution with declaration emit.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";The_call_would_have_succeeded_against_this_implementation_but_implementation_signatures_of_overloads_2793" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The call would have succeeded against this implementation, but implementation signatures of overloads are not externally visible.]]></Val>
@@ -12587,6 +12821,15 @@
           <Val><![CDATA[The containing function or module body is too large for control flow analysis.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der beinhaltende Funktions- oder Modulkörper ist zu groß für eine Ablaufsteuerungsanalyse.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";The_current_file_is_a_CommonJS_module_and_cannot_use_await_at_the_top_level_1309" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The current file is a CommonJS module and cannot use 'await' at the top level.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die aktuelle Datei ist ein CommonJS-Modul und kann „await“ nicht auf der obersten Ebene verwenden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -12711,12 +12954,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";The_import_meta_meta_property_is_only_allowed_when_the_module_option_is_es2020_esnext_or_system_1343" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";The_import_meta_meta_property_is_not_allowed_in_files_which_will_build_into_CommonJS_output_1470" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The 'import.meta' meta-property is only allowed when the '--module' option is 'es2020', 'esnext', or 'system'.]]></Val>
+          <Val><![CDATA[The 'import.meta' meta-property is not allowed in files which will build into CommonJS output.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Metaeigenschaft "import.meta" ist nur zulässig, wenn die Option "--module" den Wert "es2020", "esnext" oder "system" aufweist.]]></Val>
+            <Val><![CDATA[Die Meta-Eigenschaft „import.meta“ ist in Dateien, die in der CommonJS-Ausgabe erstellt werden, nicht zulässig.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";The_import_meta_meta_property_is_only_allowed_when_the_module_option_is_es2020_es2022_esnext_system__1343" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The 'import.meta' meta-property is only allowed when the '--module' option is 'es2020', 'es2022', 'esnext', 'system', 'node16', or 'nodenext'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Meta-Eigenschaft „import.meta“ ist nur zulässig, wenn die Option „--module“ „es2020“, „es2022“, „esnext“, „system“, „node16“ oder „nodenext“ ist.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The 'import.meta' meta-property is only allowed when the '--module' option is 'es2020', 'es2022', 'esnext', 'system', 'node12', or 'nodenext'.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -12918,11 +13173,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";The_left_hand_side_of_an_in_expression_must_be_of_type_any_string_number_or_symbol_2360" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";The_left_hand_side_of_an_in_expression_must_be_a_private_identifier_or_of_type_any_string_number_or__2360" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The left-hand side of an 'in' expression must be of type 'any', 'string', 'number', or 'symbol'.]]></Val>
+          <Val><![CDATA[The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die linke Seite eines in-Ausdrucks muss vom Typ "any", "string", "number" oder "symbol" sein.]]></Val>
+            <Val><![CDATA[Die linke Seite eines in-Ausdrucks muss ein privater Bezeichner sein oder zum Typ "any", "string", "number" oder "symbol" gehören.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13017,11 +13272,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";The_parser_expected_to_find_a_to_match_the_token_here_1007" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";The_parser_expected_to_find_a_1_to_match_the_0_token_here_1007" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The parser expected to find a '}' to match the '{' token here.]]></Val>
+          <Val><![CDATA[The parser expected to find a '{1}' to match the '{0}' token here.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Parser hat eine entsprechende Klammer "}" zu dem hier vorhandenen Token "{" erwartet.]]></Val>
+            <Val><![CDATA[Der Parser hat ein ein entsprechendes Element "{1}" zu dem hier vorhandenen Token "{0}" erwartet.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";The_project_root_is_ambiguous_but_is_required_to_resolve_export_map_entry_0_in_file_1_Supply_the_roo_2209" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project root is ambiguous, but is required to resolve export map entry '{0}' in file '{1}'. Supply the `rootDir` compiler option to disambiguate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Projektstamm ist mehrdeutig, wird aber benötigt, um den Exportzuordnungseintrag „{0}“ in der Datei „{1}“ aufzulösen. Geben Sie die Compiler-Option „rootDir“ an, um die Mehrdeutigkeit aufzuheben.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";The_project_root_is_ambiguous_but_is_required_to_resolve_import_map_entry_0_in_file_1_Supply_the_roo_2210" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project root is ambiguous, but is required to resolve import map entry '{0}' in file '{1}'. Supply the `rootDir` compiler option to disambiguate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Projektstamm ist mehrdeutig, wird aber benötigt, um den Importzuordnungseintrag „{0}“ in der Datei „{1}“ aufzulösen. Geben Sie die Compiler-Option „rootDir“ an, um die Mehrdeutigkeit aufzuheben.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13031,15 +13304,6 @@
           <Val><![CDATA[The property '{0}' cannot be accessed on type '{1}' within this class because it is shadowed by another private identifier with the same spelling.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Auf die Eigenschaft "{0}" kann für den Typ "{1}" nicht innerhalb dieser Klasse zugegriffen werden, weil sie von einem anderen privaten Bezeichner mit der gleichen Schreibweise verborgen wird.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";The_return_type_of_a_JSX_element_constructor_must_return_an_object_type_2601" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The return type of a JSX element constructor must return an object type.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Rückgabetyp eines JSX-Elementkonstruktors muss einen Objekttyp zurückgeben.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13173,15 +13437,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";The_target_of_an_assignment_must_be_a_variable_or_a_property_access_2541" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The target of an assignment must be a variable or a property access.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Das Ziel einer Zuweisung muss eine Variable oder ein Eigenschaftenzugriff sein.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";The_target_of_an_object_rest_assignment_may_not_be_an_optional_property_access_2778" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The target of an object rest assignment may not be an optional property access.]]></Val>
@@ -13227,11 +13482,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";The_type_argument_for_type_parameter_0_cannot_be_inferred_from_the_usage_Consider_specifying_the_typ_2453" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";The_type_modifier_cannot_be_used_on_a_named_export_when_export_type_is_used_on_its_export_statement_2207" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The type argument for type parameter '{0}' cannot be inferred from the usage. Consider specifying the type arguments explicitly.]]></Val>
+          <Val><![CDATA[The 'type' modifier cannot be used on a named export when 'export type' is used on its export statement.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Das Typargument für den Typparameter "{0}" kann nicht aus der Syntax abgeleitet werden. Geben Sie die Typargumente ggf. explizit an.]]></Val>
+            <Val><![CDATA[Der "Type"-Modifizierer kann nicht für einen benannten Export verwendet werden, wenn "Export-Typ" auf seiner Export-Anweisung verwendet wird.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";The_type_modifier_cannot_be_used_on_a_named_import_when_import_type_is_used_on_its_import_statement_2206" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The 'type' modifier cannot be used on a named import when 'import type' is used on its import statement.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der "Type"-Modifizierer kann nicht für einen benannten Import verwendet werden, wenn der "Import-Typ" auf seiner Import-Anweisung verwendet wird.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13241,6 +13505,15 @@
           <Val><![CDATA[The type of a function declaration must match the function's signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Typ einer Funktionsdeklaration muss mit der Signatur der Funktion übereinstimmen.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";The_type_of_this_expression_cannot_be_named_without_a_resolution_mode_assertion_which_is_an_unstable_2841" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The type of this expression cannot be named without a 'resolution-mode' assertion, which is an unstable feature. Use nightly TypeScript to silence this error. Try updating with 'npm install -D typescript@next'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Typ dieses Ausdrucks kann nicht ohne eine „resolution-mode“-Assertion benannt werden, was eine instabile Funktion ist. Verwenden Sie nächtliches TypeScript, um diesen Fehler zu unterdrücken. Versuchen Sie, mit „npm install -D typescript@next“ zu aktualisieren.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13331,6 +13604,15 @@
           <Val><![CDATA[This JSX tag's '{0}' prop expects type '{1}' which requires multiple children, but only a single child was provided.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Eigenschaft "{0}" für dieses JSX-Tag erwartet den Typ "{1}", der mehrere untergeordnete Elemente erfordert, aber es wurde nur ein untergeordnetes Elemente angegeben.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";This_condition_will_always_return_0_since_JavaScript_compares_objects_by_reference_not_value_2839" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This condition will always return '{0}' since JavaScript compares objects by reference, not value.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Diese Bedingung gibt immer „{0}“ zurück, da JavaScript Objekte nach Verweis und nicht nach Wert vergleicht.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13434,6 +13716,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";This_member_cannot_have_a_JSDoc_comment_with_an_override_tag_because_it_is_not_declared_in_the_base__4122" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This member cannot have a JSDoc comment with an '@override' tag because it is not declared in the base class '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dieser Member kann keinen JSDoc-Kommentar mit einem "@override"-Tag haben, da er nicht in der Basisklasse "{0}" deklariert ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";This_member_cannot_have_a_JSDoc_comment_with_an_override_tag_because_it_is_not_declared_in_the_base__4123" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This member cannot have a JSDoc comment with an 'override' tag because it is not declared in the base class '{0}'. Did you mean '{1}'?]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dieses Mitglied kann keinen JSDoc-Kommentar mit einem Override-Tag haben, da er nicht in der Basisklasse "{0}" deklariert ist. Meinten Sie "{1}"?]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";This_member_cannot_have_a_JSDoc_comment_with_an_override_tag_because_its_containing_class_0_does_not_4121" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This member cannot have a JSDoc comment with an '@override' tag because its containing class '{0}' does not extend another class.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dieses Mitglied kann keinen JSDoc-Kommentar mit einem Tag "@override" haben, da dessen enthaltende Klasse "{0}" keine andere Klasse erweitert.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";This_member_cannot_have_an_override_modifier_because_it_is_not_declared_in_the_base_class_0_4113" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This member cannot have an 'override' modifier because it is not declared in the base class '{0}'.]]></Val>
@@ -13457,6 +13766,15 @@
           <Val><![CDATA[This member cannot have an 'override' modifier because its containing class '{0}' does not extend another class.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Dieser Member kann keinen override-Modifizierer aufweisen, weil die Klasse "{0}", die diesen Member enthält, keine andere Klasse erweitert.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";This_member_must_have_a_JSDoc_comment_with_an_override_tag_because_it_overrides_a_member_in_the_base_4119" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This member must have a JSDoc comment with an '@override' tag because it overrides a member in the base class '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dieses Mitglied muss über einen JSDoc-Kommentar mit dem Tag "@override" verfügen, da er einen Member in der Basisklasse "{0}" überschreibt.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13515,6 +13833,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";This_parameter_property_must_have_a_JSDoc_comment_with_an_override_tag_because_it_overrides_a_member_4120" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This parameter property must have a JSDoc comment with an '@override' tag because it overrides a member in the base class '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Diese Parametereigenschaft muss über einen JSDoc-Kommentar mit einem "@override"-Tag verfügen, da sie ein Mitglied in der Basisklasse "{0}" überschreibt.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";This_parameter_property_must_have_an_override_modifier_because_it_overrides_a_member_in_base_class_0_4115" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This parameter property must have an 'override' modifier because it overrides a member in base class '{0}'.]]></Val>
@@ -13529,6 +13856,24 @@
           <Val><![CDATA[This spread always overwrites this property.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Diese Eigenschaft wird immer durch diesen Spread-Operator überschrieben.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";This_syntax_is_reserved_in_files_with_the_mts_or_cts_extension_Add_a_trailing_comma_or_explicit_cons_7060" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This syntax is reserved in files with the .mts or .cts extension. Add a trailing comma or explicit constraint.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Diese Syntax ist in Dateien mit der Erweiterung .mts oder .cts reserviert. Fügen Sie ein nachfolgendes Komma oder eine explizite Einschränkung hinzu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";This_syntax_is_reserved_in_files_with_the_mts_or_cts_extension_Use_an_as_expression_instead_7059" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This syntax is reserved in files with the .mts or .cts extension. Use an `as` expression instead.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Diese Syntax ist in Dateien mit der Erweiterung ".mts" oder ".cts" reserviert. Verwenden Sie stattdessen einen „as“-Ausdruck.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13560,11 +13905,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Top_level_await_expressions_are_only_allowed_when_the_module_option_is_set_to_esnext_or_system_and_t_1378" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";This_type_parameter_might_need_an_extends_0_constraint_2208" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Top-level 'await' expressions are only allowed when the 'module' option is set to 'esnext' or 'system', and the 'target' option is set to 'es2017' or higher.]]></Val>
+          <Val><![CDATA[This type parameter might need an `extends {0}` constraint.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[await-Ausdrücke der obersten Ebene sind nur zulässig, wenn die Option "module" auf "esnext" oder "system" festgelegt ist und die Option "target" den Wert "es2017" oder höher aufweist.]]></Val>
+            <Val><![CDATA[Für diesen Typparameter ist möglicherweise die Einschränkung "extends {0}" erforderlich.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";This_use_of_import_is_invalid_import_calls_can_be_written_but_they_must_have_parentheses_and_cannot__1326" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This use of 'import' is invalid. 'import()' calls can be written, but they must have parentheses and cannot have type arguments.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Diese Verwendung von „import“ ist ungültig. „import()“-Aufrufe können geschrieben werden, müssen jedoch Klammern aufweisen und dürfen keine Typargumente aufweisen.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Top_level_await_expressions_are_only_allowed_when_the_module_option_is_set_to_es2022_esnext_system_n_1378" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['await'-Ausdrücke der obersten Ebene sind nur zulässig, wenn die 'module'-Option auf 'es2022', 'esnext', 'system', 'node16' oder 'nodenext' und die 'target'-Option auf ' es2017' oder höher.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13578,11 +13941,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Top_level_for_await_loops_are_only_allowed_when_the_module_option_is_set_to_esnext_or_system_and_the_1432" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Top_level_for_await_loops_are_only_allowed_when_the_module_option_is_set_to_es2022_esnext_system_nod_1432" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Top-level 'for await' loops are only allowed when the 'module' option is set to 'esnext' or 'system', and the 'target' option is set to 'es2017' or higher.]]></Val>
+          <Val><![CDATA[Top-level 'for await' loops are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["for await"-Schleifen der obersten Ebene sind nur zulässig, wenn die Option "module" auf "esnext" oder "system" festgelegt ist und die Option "target" den Wert "es2017" oder höher aufweist.]]></Val>
+            <Val><![CDATA['for await'-Schleifen der obersten Ebene sind nur erlaubt, wenn die 'module'-Option auf 'es2022', 'esnext', 'system', 'node16' oder 'nodenext' gesetzt ist und die 'target'-Option auf gesetzt ist 'es2017' oder höher.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13734,6 +14097,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Type_0_has_no_signatures_for_which_the_type_argument_list_is_applicable_2635" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type '{0}' has no signatures for which the type argument list is applicable.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Typ „{0}“ weist keine Signaturen auf, für die die Liste „Typargument“ gilt.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Type_0_is_missing_the_following_properties_from_type_1_Colon_2_2739" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Type '{0}' is missing the following properties from type '{1}': {2}]]></Val>
@@ -13788,15 +14160,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Type_0_is_not_an_array_type_or_a_string_type_Use_compiler_option_downlevelIteration_to_allow_iterati_2569" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Type '{0}' is not an array type or a string type. Use compiler option '--downlevelIteration' to allow iterating of iterators.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Typ "{0}" ist kein Arraytyp oder Zeichenfolgentyp. Verwenden Sie die Compileroption "--downlevelIteration", um das Durchlaufen von Iteratoren zuzulassen.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Type_0_is_not_an_array_type_or_a_string_type_or_does_not_have_a_Symbol_iterator_method_that_returns__2549" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Type '{0}' is not an array type or a string type or does not have a '[Symbol.iterator]5D;()' method that returns an iterator.]]></Val>
@@ -13824,11 +14187,47 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Type_0_is_not_assignable_to_type_1_Did_you_mean_2_2820" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type '{0}' is not assignable to type '{1}'. Did you mean '{2}'?]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Typ "{0}" kann dem Typ "{1}" nicht zugewiesen werden. Meinten Sie "{2}"?]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Type_0_is_not_assignable_to_type_1_Two_different_types_with_this_name_exist_but_they_are_unrelated_2719" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Type '{0}' is not assignable to type '{1}'. Two different types with this name exist, but they are unrelated.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Typ "{0}" kann dem Typ "{1}" nicht zugewiesen werden. Es sind zwei verschiedene Typen mit diesem Namen vorhanden, diese sind jedoch nicht verwandt.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Type_0_is_not_assignable_to_type_1_as_implied_by_variance_annotation_2636" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type '{0}' is not assignable to type '{1}' as implied by variance annotation.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Typ „{0}“ kann dem Typ „{1}“ nicht zugewiesen werden, wie in der Abweichungsanmerkung impliziert.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Type_0_is_not_assignable_to_type_1_with_exactOptionalPropertyTypes_Colon_true_Consider_adding_undefi_2375" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type '{0}' is not assignable to type '{1}' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Typ „{0}“ kann dem Typ „{1}“ mit „exactOptionalPropertyTypes: true“ nicht zugewiesen werden. Erwägen Sie das Hinzufügen von „undefined“ zu den Typen der Zieleigenschaften.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Type_0_is_not_assignable_to_type_1_with_exactOptionalPropertyTypes_Colon_true_Consider_adding_undefi_2412" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type '{0}' is not assignable to type '{1}' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the type of the target.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Typ „{0}“ kann dem Typ „{1}“ mit „exactOptionalPropertyTypes: true“ nicht zugewiesen werden. Erwägen Sie das Hinzufügen von „undefined“ zum Typ des Ziels.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13956,15 +14355,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Type_argument_candidate_1_is_not_a_valid_type_argument_because_it_is_not_a_supertype_of_candidate_0_2455" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Type argument candidate '{1}' is not a valid type argument because it is not a supertype of candidate '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Typargumentkandidat "{1}" ist kein gültiges Typargument, weil er kein Obertyp des Kandidaten "{0}" ist.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Type_argument_expected_1140" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Type argument expected.]]></Val>
@@ -14037,15 +14427,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Type_catch_clause_variables_as_unknown_instead_of_any_6803" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Type catch clause variables as 'unknown' instead of 'any'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Geben Sie Variablen der catch-Klauseln als "unknown" anstelle von "any" ein.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Type_declaration_files_to_be_included_in_compilation_6124" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Type declaration files to be included in compilation.]]></Val>
@@ -14060,6 +14441,15 @@
           <Val><![CDATA[Type expected.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Es wurde ein Typ erwartet.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Type_import_assertions_should_have_exactly_one_key_resolution_mode_with_value_import_or_require_1456" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type import assertions should have exactly one key - `resolution-mode` - with value `import` or `require`.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Typimportassertionen sollten über genau einen Schlüssel verfügen – „resolution-mode“ – mit dem Wert „import“ oder „require“.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -14114,6 +14504,15 @@
           <Val><![CDATA[Type of computed property's value is '{0}', which is not assignable to type '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Typ des Werts der berechneten Eigenschaft lautet "{0}" und kann dem Typ "{1}" nicht zugewiesen werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Type_of_instance_member_variable_0_cannot_reference_identifier_1_declared_in_the_constructor_2844" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type of instance member variable '{0}' cannot reference identifier '{1}' declared in the constructor.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Typ der Instanzmembervariablen „{0}“ darf nicht auf den im Konstruktor deklarierten Bezeichner „{1}“ verweisen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -14360,6 +14759,15 @@
           <Val><![CDATA[======== Type reference directive '{0}' was successfully resolved to '{1}' with Package ID '{2}', primary: {3}. ========]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[======== Die Typverweisdirektive "{0}" wurde erfolgreich in "{1}" mit Paket-ID "{2}" aufgelöst. Primär: {3}. ========]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Types_cannot_appear_in_export_declarations_in_JavaScript_files_18043" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Types cannot appear in export declarations in JavaScript files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Typen können in Exportdeklarationen in JavaScript-Dateien nicht angezeigt werden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -14616,15 +15024,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Unsupported_locale_0_6049" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unsupported locale '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nicht unterstütztes Gebietsschema "{0}".]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Unterminated_Unicode_escape_sequence_1199" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unterminated Unicode escape sequence.]]></Val>
@@ -14693,6 +15092,15 @@
           <Val><![CDATA[Unused '@ts-expect-error' directive.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nicht verwendete @ts-expect-error-Direktive.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Update_import_from_0_90058" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update import from "{0}"]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Import von "{0}" aktualisieren]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -14886,6 +15294,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Variance_annotations_are_only_supported_in_type_aliases_for_object_function_constructor_and_mapped_t_2637" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Variance annotations are only supported in type aliases for object, function, constructor, and mapped types.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Abweichungsanmerkungen werden nur in Typaliasnamen für Objekt-, Funktions-, Konstruktor- und zugeordnete Typen unterstützt.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Version_0_6029" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Version {0}]]></Val>
@@ -14895,11 +15312,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Visit_https_Colon_Slash_Slashaka_ms_Slashtsconfig_json_to_read_more_about_this_file_95110" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";Visit_https_Colon_Slash_Slashaka_ms_Slashtsconfig_to_read_more_about_this_file_95110" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Visit https://aka.ms/tsconfig.json to read more about this file]]></Val>
+          <Val><![CDATA[Visit https://aka.ms/tsconfig to read more about this file]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Besuchen Sie https://aka.ms/tsconfig.json, um mehr über diese Datei zu erfahren.]]></Val>
+            <Val><![CDATA[Besuchen Sie https://aka.ms/tsconfig, um mehr über diese Datei zu erfahren.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -14940,6 +15357,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";We_can_only_write_a_type_for_0_by_adding_a_type_for_the_entire_parameter_here_2843" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[We can only write a type for '{0}' by adding a type for the entire parameter here.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wir können nur einen Typ für „{0}“ schreiben, indem hier ein Typ für den gesamten Parameter hinzugefügt wird.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";When_assigning_functions_check_to_ensure_parameters_and_the_return_values_are_subtype_compatible_6698" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[When assigning functions, check to ensure parameters and the return values are subtype-compatible.]]></Val>
@@ -14951,10 +15377,13 @@
       </Item>
       <Item ItemId=";When_type_checking_take_into_account_null_and_undefined_6699" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[When type checking, take into account `null` and `undefined`.]]></Val>
+          <Val><![CDATA[When type checking, take into account 'null' and 'undefined'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Berücksichtigen Sie bei der Typüberprüfung "null" und "undefined".]]></Val>
+            <Val><![CDATA[Berücksichtigen Sie bei der Typüberprüfung „null“ und „undefined“.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[When type checking, take into account `null` and `undefined`.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -15035,6 +15464,24 @@
           <Val><![CDATA[You cannot rename a module via a global import.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ein Modul kann nicht über einen globalen Import umbenannt werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";You_cannot_rename_elements_that_are_defined_in_a_node_modules_folder_8035" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You cannot rename elements that are defined in a 'node_modules' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Elemente, die in einem Ordner "node_modules" definiert sind, können nicht umbenannt werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";You_cannot_rename_elements_that_are_defined_in_another_node_modules_folder_8036" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You cannot rename elements that are defined in another 'node_modules' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Elemente, die in einem anderen Ordner "node_modules" definiert sind, können nicht umbenannt werden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -15282,11 +15729,47 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";_0_is_a_type_and_cannot_be_imported_in_JavaScript_files_Use_1_in_a_JSDoc_type_annotation_18042" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' is a type and cannot be imported in JavaScript files. Use '{1}' in a JSDoc type annotation.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" ist ein Typ und kann nicht in JavaScript-Dateien importiert werden. Verwenden Sie "{1}" in einer JSDoc-Typanmerkung.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";_0_is_a_type_and_must_be_imported_using_a_type_only_import_when_preserveValueImports_and_isolatedMod_1444" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' is a type and must be imported using a type-only import when 'preserveValueImports' and 'isolatedModules' are both enabled.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„{0}“ ist ein Typ und muss mithilfe eines reinen Typimports importiert werden, wenn „preserveValueImports“ und isolatedModules“ beide aktiviert sind.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";_0_is_an_unused_renaming_of_1_Did_you_intend_to_use_it_as_a_type_annotation_2842" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' is an unused renaming of '{1}'. Did you intend to use it as a type annotation?]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„{0}“ ist eine nicht verwendete Umbenennung von „{1}“. Wollten Sie sie als Typanmerkung verwenden?]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";_0_is_assignable_to_the_constraint_of_type_1_but_1_could_be_instantiated_with_a_different_subtype_of_5075" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is assignable to the constraint of type '{1}', but '{1}' could be instantiated with a different subtype of constraint '{2}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA["{0}" kann der Einschränkung vom Typ "{1}" zugewiesen werden, aber "{1}" könnte mit einem anderen Untertyp der Einschränkung "{2}" instanziiert werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";_0_is_automatically_exported_here_18044" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' is automatically exported here.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" wird hier automatisch exportiert.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -15357,6 +15840,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";_0_is_not_allowed_as_a_parameter_name_1390" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' is not allowed as a parameter name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" ist als Parametername nicht zulässig.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";_0_is_not_allowed_as_a_variable_declaration_name_1389" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not allowed as a variable declaration name.]]></Val>
@@ -15411,20 +15903,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";_0_modifier_can_only_appear_on_a_type_parameter_of_a_class_interface_or_type_alias_1274" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' modifier can only appear on a type parameter of a class, interface or type alias]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Modifizierer „{0}“ kann nur für einen Typparameter einer Klasse, einer Schnittstelle oder eines Typalias verwendet werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";_0_modifier_cannot_appear_on_a_constructor_declaration_1089" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' modifier cannot appear on a constructor declaration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Modifizierer "{0}" darf nicht für eine Konstruktordeklaration verwendet werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";_0_modifier_cannot_appear_on_a_data_property_1043" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' modifier cannot appear on a data property.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Modifizierer "{0}" darf nicht für eine Dateneigenschaft verwendet werden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -15452,6 +15944,15 @@
           <Val><![CDATA['{0}' modifier cannot appear on a type member.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Modifizierer "{0}" darf nicht für einen Typmember verwendet werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";_0_modifier_cannot_appear_on_a_type_parameter_1273" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' modifier cannot appear on a type parameter]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Modifizierer „{0}“ kann nicht für einen Typparameter verwendet werden]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -15497,15 +15998,6 @@
           <Val><![CDATA['{0}' modifier cannot be used with '{1}' modifier.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Modifizierer "{0}" darf nicht mit dem Modifizierer "{1}" verwendet werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";_0_modifier_cannot_be_used_with_a_class_declaration_1041" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' modifier cannot be used with a class declaration.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Modifizierer "{0}" darf nicht mit einer Klassendeklaration verwendet werden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -15597,20 +16089,38 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";_0_resolves_to_a_type_only_declaration_and_must_be_imported_using_a_type_only_import_when_preserveVa_1446" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' resolves to a type-only declaration and must be imported using a type-only import when 'preserveValueImports' and 'isolatedModules' are both enabled.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„{0}“ wird in eine reine Typdeklaration aufgelöst und muss mithilfe eines reinen Typimports importiert werden, wenn „preserveValueImports“ und isolatedModules“ beide aktiviert sind.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";_0_resolves_to_a_type_only_declaration_and_must_be_re_exported_using_a_type_only_re_export_when_isol_1448" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' resolves to a type-only declaration and must be re-exported using a type-only re-export when 'isolatedModules' is enabled.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„{0}“ wird in eine reine Typdeklaration aufgelöst und muss mithilfe eines reinen Typreexports erneut exportiert werden, wenn „isolatedModules“ aktiviert ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";_0_should_be_set_inside_the_compilerOptions_object_of_the_config_json_file_6258" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' should be set inside the 'compilerOptions' object of the config json file]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" sollte im CompilerOptions-Objekt der JSON-Konfigurationsdatei festgelegt werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";_0_tag_already_specified_1223" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' tag already specified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Tag "{0}" wurde bereits angegeben.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";_0_tag_cannot_be_used_independently_as_a_top_level_JSDoc_tag_1253" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' tag cannot be used independently as a top level JSDoc tag.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Das Tag "{0}" kann nicht unabhängig als ein JSDoc-Tag der obersten Ebene verwendet werden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -15687,6 +16197,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";auto_Colon_Treat_files_with_imports_exports_import_meta_jsx_with_jsx_Colon_react_jsx_or_esm_format_w_1476" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA["auto": Treat files with imports, exports, import.meta, jsx (with jsx: react-jsx), or esm format (with module: node16+) as modules.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„auto“: Dateien mit imports, exports, import.meta, jsx (mit jsx: respond-jsx) oder esm-Format (mit module: node16+) als Module behandeln.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA["auto": Treat files with imports, exports, import.meta, jsx (with jsx: react-jsx), or esm format (with module: node12+) as modules.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";await_expressions_are_only_allowed_at_the_top_level_of_a_file_when_that_file_is_a_module_but_this_fi_1375" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module.]]></Val>
@@ -15753,11 +16275,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";class_expressions_are_not_currently_supported_9003" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";catch_or_finally_expected_1472" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA['class' expressions are not currently supported.]]></Val>
+          <Val><![CDATA['catch' or 'finally' expected.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[class-Ausdrücke werden zurzeit nicht unterstützt.]]></Val>
+            <Val><![CDATA[„catch“ oder „finally“ erwartet.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -15854,15 +16376,6 @@
           <Val><![CDATA['delete' cannot be called on an identifier in strict mode.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA["delete" kann für einen Bezeichner im Strict-Modus nicht aufgerufen werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";delete_this_Project_0_is_up_to_date_because_it_was_previously_built_6360" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[delete this - Project '{0}' is up to date because it was previously built]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dies löschen – Projekt "{0}" ist auf dem neuesten Stand, da es bereits zuvor erstellt wurde]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -15980,15 +16493,6 @@
           <Val><![CDATA['for await' loops are only allowed within async functions and at the top levels of modules.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA["for await"-Schleifen sind nur innerhalb von asynchronen Funktionen und auf den obersten Modulebenen zulässig.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";get_and_set_accessor_must_have_the_same_this_type_2682" ItemType="0" PsrId="306" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['get' and 'set' accessor must have the same 'this' type.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die get- und set-Accessoren müssen den gleichen this-Typ aufweisen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -16128,6 +16632,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";or_JSX_element_expected_1145" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{' or JSX element expected.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{' oder JSX-Element erwartet.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";or_expected_1144" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{' or ';' expected.]]></Val>
@@ -16200,6 +16713,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";package_json_scope_0_explicitly_maps_specifier_1_to_null_6274" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[package.json scope '{0}' explicitly maps specifier '{1}' to null.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der package.json-Bereich "{0}" ordnet den Bezeichner "{1}" explizit NULL zu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";package_json_scope_0_has_invalid_type_for_target_of_specifier_1_6275" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[package.json scope '{0}' has invalid type for target of specifier '{1}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der package.json-Bereich "{0}" weist einen ungültigen Typ für das Ziel des Spezifizierers "{1}" auf.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";package_json_scope_0_has_no_imports_defined_6273" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[package.json scope '{0}' has no imports defined.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Für package.jsim, Bereich "{0}" wurden keine Importe definiert.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";paths_option_is_specified_looking_for_a_pattern_to_match_module_name_0_6091" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['paths' option is specified, looking for a pattern to match module name '{0}'.]]></Val>
@@ -16232,6 +16772,51 @@
           <Val><![CDATA['require' call may be converted to an import.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Aufruf von "require" kann in einen Aufruf von "import" konvertiert werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";resolution_mode_assertions_are_only_supported_when_moduleResolution_is_node16_or_nodenext_1452" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['resolution-mode' assertions are only supported when `moduleResolution` is `node16` or `nodenext`.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„resolution-mode“-Zusicherungen werden nur unterstützt, wenn „moduleResolution“ „node16“ oder „nodenext“ ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";resolution_mode_assertions_are_unstable_Use_nightly_TypeScript_to_silence_this_error_Try_updating_wi_4125" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['resolution-mode' assertions are unstable. Use nightly TypeScript to silence this error. Try updating with 'npm install -D typescript@next'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['resolution-mode' Behauptungen sind instabil. Verwenden Sie nächtliches TypeScript, um diesen Fehler zu unterdrücken. Versuchen Sie, mit „npm install -D typescript@next“ zu aktualisieren.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";resolution_mode_can_only_be_set_for_type_only_imports_1454" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[`resolution-mode` can only be set for type-only imports.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„resolution-mode“ kann nur für reine Typenimporte festgelegt werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";resolution_mode_is_the_only_valid_key_for_type_import_assertions_1455" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[`resolution-mode` is the only valid key for type import assertions.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„resolution-mode“ ist für Typimportassertionen der einzige gültige Schlüssel.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";resolution_mode_should_be_either_require_or_import_1453" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[`resolution-mode` should be either `require` or `import`.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[„resolution-mode“ muss entweder auf „require“ oder „import“ festgelegt sein.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -16388,6 +16973,15 @@
           <Val><![CDATA['this' implicitly has type 'any' because it does not have a type annotation.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA["this" weist implizit den Typ "any" auf, weil keine Typanmerkung vorhanden ist.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";true_for_ES2022_and_above_including_ESNext_6930" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[`true` for ES2022 and above, including ESNext.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["true" für ES2022 und höher, einschließlich ESNext.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
