@@ -180,7 +180,21 @@ namespace ts.server {
         const originalWatchDirectory: ServerHost["watchDirectory"] = sys.watchDirectory.bind(sys);
         const logger = createLogger();
 
-        const pending: Buffer[] = [];
+        // enable deprecation logging
+        Debug.loggingHost = {
+            log(level, s) {
+                switch (level) {
+                    case ts.LogLevel.Error:
+                    case ts.LogLevel.Warning:
+                        return logger.msg(s, Msg.Err);
+                    case ts.LogLevel.Info:
+                    case ts.LogLevel.Verbose:
+                        return logger.msg(s, Msg.Info);
+                }
+            }
+        };
+
+        const pending = createQueue<Buffer>();
         let canWrite = true;
 
         if (useWatchGuard) {
@@ -233,7 +247,7 @@ namespace ts.server {
 
         // Override sys.write because fs.writeSync is not reliable on Node 4
         sys.write = (s: string) => writeMessage(sys.bufferFrom!(s, "utf8") as globalThis.Buffer);
-         // REVIEW: for now this implementation uses polling.
+        // REVIEW: for now this implementation uses polling.
         // The advantage of polling is that it works reliably
         // on all os and with network mounted files.
         // For 90 referenced files, the average time to detect
@@ -259,7 +273,7 @@ namespace ts.server {
             sys.gc = () => global.gc?.();
         }
 
-        sys.require = (initialDir: string, moduleName: string): RequireResult => {
+        sys.require = (initialDir: string, moduleName: string): ModuleImportResult => {
             try {
                 return { module: require(resolveJSModule(moduleName, initialDir, sys)), error: undefined };
             }
@@ -320,7 +334,7 @@ namespace ts.server {
 
         function writeMessage(buf: Buffer) {
             if (!canWrite) {
-                pending.push(buf);
+                pending.enqueue(buf);
             }
             else {
                 canWrite = false;
@@ -330,8 +344,8 @@ namespace ts.server {
 
         function setCanWriteFlagAndWriteMessageIfNecessary() {
             canWrite = true;
-            if (pending.length) {
-                writeMessage(pending.shift()!);
+            if (!pending.isEmpty()) {
+                writeMessage(pending.dequeue());
             }
         }
 
@@ -416,7 +430,7 @@ namespace ts.server {
             private installer!: NodeChildProcess;
             private projectService!: ProjectService;
             private activeRequestCount = 0;
-            private requestQueue: QueuedOperation[] = [];
+            private requestQueue = createQueue<QueuedOperation>();
             private requestMap = new Map<string, QueuedOperation>(); // Maps operation ID to newest requestQueue entry with that ID
             /** We will lazily request the types registry on the first call to `isKnownTypesPackageName` and store it in `typesRegistryCache`. */
             private requestedRegistry = false;
@@ -553,7 +567,7 @@ namespace ts.server {
                     if (this.logger.hasLevel(LogLevel.verbose)) {
                         this.logger.info(`Deferring request for: ${operationId}`);
                     }
-                    this.requestQueue.push(queuedRequest);
+                    this.requestQueue.enqueue(queuedRequest);
                     this.requestMap.set(operationId, queuedRequest);
                 }
             }
@@ -635,8 +649,8 @@ namespace ts.server {
                             Debug.fail("Received too many responses");
                         }
 
-                        while (this.requestQueue.length > 0) {
-                            const queuedRequest = this.requestQueue.shift()!;
+                        while (!this.requestQueue.isEmpty()) {
+                            const queuedRequest = this.requestQueue.dequeue();
                             if (this.requestMap.get(queuedRequest.operationId) === queuedRequest) {
                                 this.requestMap.delete(queuedRequest.operationId);
                                 this.scheduleRequest(queuedRequest);
@@ -759,12 +773,40 @@ namespace ts.server {
             }
         }
 
+        class IpcIOSession extends IOSession {
+
+            protected writeMessage(msg: protocol.Message): void {
+                const verboseLogging = logger.hasLevel(LogLevel.verbose);
+                if (verboseLogging) {
+                    const json = JSON.stringify(msg);
+                    logger.info(`${msg.type}:${indent(json)}`);
+                }
+
+                process.send!(msg);
+            }
+
+            protected parseMessage(message: any): protocol.Request {
+                return message as protocol.Request;
+            }
+
+            protected toStringMessage(message: any) {
+                return JSON.stringify(message, undefined, 2);
+            }
+
+            public listen() {
+                process.on("message", (e: any) => {
+                    this.onMessage(e);
+                });
+            }
+        }
+
         const eventPort: number | undefined = parseEventPort(findArgument("--eventPort"));
         const typingSafeListLocation = findArgument(Arguments.TypingSafeListLocation)!; // TODO: GH#18217
         const typesMapLocation = findArgument(Arguments.TypesMapLocation) || combinePaths(getDirectoryPath(sys.getExecutingFilePath()), "typesMap.json");
         const npmLocation = findArgument(Arguments.NpmLocation);
         const validateDefaultNpmLocation = hasArgument(Arguments.ValidateDefaultNpmLocation);
         const disableAutomaticTypingAcquisition = hasArgument("--disableAutomaticTypingAcquisition");
+        const useNodeIpc = hasArgument("--useNodeIpc");
         const telemetryEnabled = hasArgument(Arguments.EnableTelemetry);
         const commandLineTraceDir = findArgument("--traceDirectory");
         const traceDir = commandLineTraceDir
@@ -774,7 +816,7 @@ namespace ts.server {
             startTracing("server", traceDir);
         }
 
-        const ioSession = new IOSession();
+        const ioSession = useNodeIpc ? new IpcIOSession() : new IOSession();
         process.on("uncaughtException", err => {
             ioSession.logError(err, "unknown");
         });

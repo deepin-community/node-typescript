@@ -1,0 +1,2 @@
+typescript/bin/tsc /usr/bin/tsc
+typescript/bin/tsserver /usr/bin/tsserver

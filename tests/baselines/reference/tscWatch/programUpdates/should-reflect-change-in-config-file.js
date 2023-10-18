@@ -31,7 +31,7 @@ Output::
 [[90m12:00:17 AM[0m] Starting compilation in watch mode...
 
 a/lib/lib.d.ts
-  Default library
+  Default library for target 'es3'
 a/b/commonFile1.ts
   Part of 'files' list in tsconfig.json
 a/b/commonFile2.ts
@@ -67,12 +67,12 @@ WatchedFiles::
   {"fileName":"/a/b/commonFile2.ts","pollingInterval":250}
 /a/lib/lib.d.ts:
   {"fileName":"/a/lib/lib.d.ts","pollingInterval":250}
+/a/b/node_modules/@types:
+  {"fileName":"/a/b/node_modules/@types","pollingInterval":500}
 
 FsWatches::
 
 FsWatchesRecursive::
-/a/b/node_modules/@types:
-  {"directoryName":"/a/b/node_modules/@types","fallbackPollingInterval":500,"fallbackOptions":{"watchFile":"PriorityPollingInterval"}}
 
 exitCode:: ExitStatus.undefined
 
@@ -97,7 +97,7 @@ Output::
 [[90m12:00:25 AM[0m] File change detected. Starting incremental compilation...
 
 a/lib/lib.d.ts
-  Default library
+  Default library for target 'es3'
 a/b/commonFile1.ts
   Part of 'files' list in tsconfig.json
 a/b/commonFile2.ts
@@ -132,12 +132,12 @@ WatchedFiles::
   {"fileName":"/a/b/commonFile2.ts","pollingInterval":250}
 /a/lib/lib.d.ts:
   {"fileName":"/a/lib/lib.d.ts","pollingInterval":250}
+/a/b/node_modules/@types:
+  {"fileName":"/a/b/node_modules/@types","pollingInterval":500}
 
 FsWatches::
 
 FsWatchesRecursive::
-/a/b/node_modules/@types:
-  {"directoryName":"/a/b/node_modules/@types","fallbackPollingInterval":500,"fallbackOptions":{"watchFile":"PriorityPollingInterval"}}
 
 exitCode:: ExitStatus.undefined
 
@@ -163,7 +163,7 @@ Output::
 [[90m12:00:36 AM[0m] File change detected. Starting incremental compilation...
 
 a/lib/lib.d.ts
-  Default library
+  Default library for target 'es3'
 a/b/commonFile1.ts
   Part of 'files' list in tsconfig.json
 [[90m12:00:40 AM[0m] Found 0 errors. Watching for file changes.
@@ -190,12 +190,12 @@ WatchedFiles::
   {"fileName":"/a/b/commonFile1.ts","pollingInterval":250}
 /a/lib/lib.d.ts:
   {"fileName":"/a/lib/lib.d.ts","pollingInterval":250}
+/a/b/node_modules/@types:
+  {"fileName":"/a/b/node_modules/@types","pollingInterval":500}
 
 FsWatches::
 
 FsWatchesRecursive::
-/a/b/node_modules/@types:
-  {"directoryName":"/a/b/node_modules/@types","fallbackPollingInterval":500,"fallbackOptions":{"watchFile":"PriorityPollingInterval"}}
 
 exitCode:: ExitStatus.undefined
 

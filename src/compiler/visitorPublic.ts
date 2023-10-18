@@ -80,8 +80,6 @@ namespace ts {
             return nodes;
         }
 
-        let updated: T[] | undefined;
-
         // Ensure start and count have valid values
         const length = nodes.length;
         if (start === undefined || start < 0) {
@@ -96,11 +94,54 @@ namespace ts {
         let pos = -1;
         let end = -1;
         if (start > 0 || count < length) {
-            // If we are not visiting all of the original nodes, we must always create a new array.
             // Since this is a fragment of a node array, we do not copy over the previous location
             // and will only copy over `hasTrailingComma` if we are including the last element.
-            updated = [];
             hasTrailingComma = nodes.hasTrailingComma && start + count === length;
+        }
+        else {
+            pos = nodes.pos;
+            end = nodes.end;
+            hasTrailingComma = nodes.hasTrailingComma;
+        }
+
+        const updated = visitArrayWorker(nodes, visitor, test, start, count);
+        if (updated !== nodes as readonly T[]) {
+            // TODO(rbuckton): Remove dependency on `ts.factory` in favor of a provided factory.
+            const updatedArray = factory.createNodeArray(updated, hasTrailingComma);
+            setTextRangePosEnd(updatedArray, pos, end);
+            return updatedArray;
+        }
+
+        return nodes;
+    }
+
+    /* @internal */
+    export function visitArray<T extends Node, U extends T>(nodes: readonly T[] | undefined, visitor: Visitor, test: (node: Node) => node is U, start?: number, count?: number): readonly U[] | undefined {
+        if (nodes === undefined) {
+            return nodes;
+        }
+
+        // Ensure start and count have valid values
+        const length = nodes.length;
+        if (start === undefined || start < 0) {
+            start = 0;
+        }
+
+        if (count === undefined || count > length - start) {
+            count = length - start;
+        }
+
+        return visitArrayWorker(nodes, visitor, test, start, count) as readonly U[];
+    }
+
+    /* @internal */
+    function visitArrayWorker<T extends Node>(nodes: readonly T[], visitor: Visitor, test: ((node: Node) => boolean) | undefined, start: number, count: number): readonly T[] | undefined {
+        let updated: T[] | undefined;
+
+        const length = nodes.length;
+        if (start > 0 || count < length) {
+            // If we are not visiting all of the original nodes, we must always create a new array.
+            updated = [];
         }
 
         // Visit each original node.
@@ -111,9 +152,6 @@ namespace ts {
                 if (updated === undefined) {
                     // Ensure we have a copy of `nodes`, up to the current index.
                     updated = nodes.slice(0, i);
-                    hasTrailingComma = nodes.hasTrailingComma;
-                    pos = nodes.pos;
-                    end = nodes.end;
                 }
                 if (visited) {
                     if (isArray(visited)) {
@@ -130,14 +168,7 @@ namespace ts {
             }
         }
 
-        if (updated) {
-            // TODO(rbuckton): Remove dependency on `ts.factory` in favor of a provided factory.
-            const updatedArray = factory.createNodeArray(updated, hasTrailingComma);
-            setTextRangePosEnd(updatedArray, pos, end);
-            return updatedArray;
-        }
-
-        return nodes;
+        return updated ?? nodes;
     }
 
     /**
@@ -232,7 +263,6 @@ namespace ts {
             )
         );
         return factory.updateParameterDeclaration(parameter,
-            parameter.decorators,
             parameter.modifiers,
             parameter.dotDotDotToken,
             factory.getGeneratedNameForNode(parameter),
@@ -269,7 +299,6 @@ namespace ts {
             )
         );
         return factory.updateParameterDeclaration(parameter,
-            parameter.decorators,
             parameter.modifiers,
             parameter.dotDotDotToken,
             parameter.name,
@@ -385,6 +414,7 @@ namespace ts {
             case SyntaxKind.TypeParameter:
                 Debug.type<TypeParameterDeclaration>(node);
                 return factory.updateTypeParameterDeclaration(node,
+                    nodesVisitor(node.modifiers, visitor, isModifier),
                     nodeVisitor(node.name, visitor, isIdentifier),
                     nodeVisitor(node.constraint, visitor, isTypeNode),
                     nodeVisitor(node.default, visitor, isTypeNode));
@@ -392,8 +422,7 @@ namespace ts {
             case SyntaxKind.Parameter:
                 Debug.type<ParameterDeclaration>(node);
                 return factory.updateParameterDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
-                    nodesVisitor(node.modifiers, visitor, isModifier),
+                    nodesVisitor(node.modifiers, visitor, isModifierLike),
                     nodeVisitor(node.dotDotDotToken, tokenVisitor, isDotDotDotToken),
                     nodeVisitor(node.name, visitor, isBindingName),
                     nodeVisitor(node.questionToken, tokenVisitor, isQuestionToken),
@@ -417,8 +446,7 @@ namespace ts {
             case SyntaxKind.PropertyDeclaration:
                 Debug.type<PropertyDeclaration>(node);
                 return factory.updatePropertyDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
-                    nodesVisitor(node.modifiers, visitor, isModifier),
+                    nodesVisitor(node.modifiers, visitor, isModifierLike),
                     nodeVisitor(node.name, visitor, isPropertyName),
                     // QuestionToken and ExclamationToken is uniqued in Property Declaration and the signature of 'updateProperty' is that too
                     nodeVisitor(node.questionToken || node.exclamationToken, tokenVisitor, isQuestionOrExclamationToken),
@@ -438,8 +466,7 @@ namespace ts {
             case SyntaxKind.MethodDeclaration:
                 Debug.type<MethodDeclaration>(node);
                 return factory.updateMethodDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
-                    nodesVisitor(node.modifiers, visitor, isModifier),
+                    nodesVisitor(node.modifiers, visitor, isModifierLike),
                     nodeVisitor(node.asteriskToken, tokenVisitor, isAsteriskToken),
                     nodeVisitor(node.name, visitor, isPropertyName),
                     nodeVisitor(node.questionToken, tokenVisitor, isQuestionToken),
@@ -451,7 +478,6 @@ namespace ts {
             case SyntaxKind.Constructor:
                 Debug.type<ConstructorDeclaration>(node);
                 return factory.updateConstructorDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     visitParameterList(node.parameters, visitor, context, nodesVisitor),
                     visitFunctionBody(node.body!, visitor, context, nodeVisitor));
@@ -459,8 +485,7 @@ namespace ts {
             case SyntaxKind.GetAccessor:
                 Debug.type<GetAccessorDeclaration>(node);
                 return factory.updateGetAccessorDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
-                    nodesVisitor(node.modifiers, visitor, isModifier),
+                    nodesVisitor(node.modifiers, visitor, isModifierLike),
                     nodeVisitor(node.name, visitor, isPropertyName),
                     visitParameterList(node.parameters, visitor, context, nodesVisitor),
                     nodeVisitor(node.type, visitor, isTypeNode),
@@ -469,8 +494,7 @@ namespace ts {
             case SyntaxKind.SetAccessor:
                 Debug.type<SetAccessorDeclaration>(node);
                 return factory.updateSetAccessorDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
-                    nodesVisitor(node.modifiers, visitor, isModifier),
+                    nodesVisitor(node.modifiers, visitor, isModifierLike),
                     nodeVisitor(node.name, visitor, isPropertyName),
                     visitParameterList(node.parameters, visitor, context, nodesVisitor),
                     visitFunctionBody(node.body!, visitor, context, nodeVisitor));
@@ -480,9 +504,7 @@ namespace ts {
                 context.startLexicalEnvironment();
                 context.suspendLexicalEnvironment();
                 return factory.updateClassStaticBlockDeclaration(node,
-                        nodesVisitor(node.decorators, visitor, isDecorator),
-                        nodesVisitor(node.modifiers, visitor, isModifier),
-                        visitFunctionBody(node.body, visitor, context, nodeVisitor));
+                    visitFunctionBody(node.body, visitor, context, nodeVisitor));
 
             case SyntaxKind.CallSignature:
                 Debug.type<CallSignatureDeclaration>(node);
@@ -501,7 +523,6 @@ namespace ts {
             case SyntaxKind.IndexSignature:
                 Debug.type<IndexSignatureDeclaration>(node);
                 return factory.updateIndexSignature(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     nodesVisitor(node.parameters, visitor, isParameterDeclaration),
                     nodeVisitor(node.type, visitor, isTypeNode));
@@ -538,7 +559,8 @@ namespace ts {
             case SyntaxKind.TypeQuery:
                 Debug.type<TypeQueryNode>(node);
                 return factory.updateTypeQueryNode(node,
-                    nodeVisitor(node.exprName, visitor, isEntityName));
+                    nodeVisitor(node.exprName, visitor, isEntityName),
+                    nodesVisitor(node.typeArguments, visitor, isTypeNode));
 
             case SyntaxKind.TypeLiteral:
                 Debug.type<TypeLiteralNode>(node);
@@ -592,18 +614,26 @@ namespace ts {
                 Debug.type<ImportTypeNode>(node);
                 return factory.updateImportTypeNode(node,
                     nodeVisitor(node.argument, visitor, isTypeNode),
+                    nodeVisitor(node.assertions, visitor, isNode),
                     nodeVisitor(node.qualifier, visitor, isEntityName),
-                    visitNodes(node.typeArguments, visitor, isTypeNode),
+                    nodesVisitor(node.typeArguments, visitor, isTypeNode),
                     node.isTypeOf
+                );
+
+            case SyntaxKind.ImportTypeAssertionContainer:
+                Debug.type<ImportTypeAssertionContainer>(node);
+                return factory.updateImportTypeAssertionContainer(node,
+                    nodeVisitor(node.assertClause, visitor, isNode),
+                    node.multiLine
                 );
 
             case SyntaxKind.NamedTupleMember:
                 Debug.type<NamedTupleMember>(node);
                 return factory.updateNamedTupleMember(node,
-                    visitNode(node.dotDotDotToken, visitor, isDotDotDotToken),
-                    visitNode(node.name, visitor, isIdentifier),
-                    visitNode(node.questionToken, visitor, isQuestionToken),
-                    visitNode(node.type, visitor, isTypeNode),
+                    nodeVisitor(node.dotDotDotToken, tokenVisitor, isDotDotDotToken),
+                    nodeVisitor(node.name, visitor, isIdentifier),
+                    nodeVisitor(node.questionToken, tokenVisitor, isQuestionToken),
+                    nodeVisitor(node.type, visitor, isTypeNode),
                 );
 
             case SyntaxKind.ParenthesizedType:
@@ -629,7 +659,8 @@ namespace ts {
                     nodeVisitor(node.typeParameter, visitor, isTypeParameterDeclaration),
                     nodeVisitor(node.nameType, visitor, isTypeNode),
                     nodeVisitor(node.questionToken, tokenVisitor, isQuestionOrPlusOrMinusToken),
-                    nodeVisitor(node.type, visitor, isTypeNode));
+                    nodeVisitor(node.type, visitor, isTypeNode),
+                    nodesVisitor(node.members, visitor, isTypeElement));
 
             case SyntaxKind.LiteralType:
                 Debug.type<LiteralTypeNode>(node);
@@ -730,7 +761,7 @@ namespace ts {
                 Debug.type<TaggedTemplateExpression>(node);
                 return factory.updateTaggedTemplateExpression(node,
                     nodeVisitor(node.tag, visitor, isExpression),
-                    visitNodes(node.typeArguments, visitor, isTypeNode),
+                    nodesVisitor(node.typeArguments, visitor, isTypeNode),
                     nodeVisitor(node.template, visitor, isTemplateLiteral));
 
             case SyntaxKind.TypeAssertionExpression:
@@ -831,8 +862,7 @@ namespace ts {
             case SyntaxKind.ClassExpression:
                 Debug.type<ClassExpression>(node);
                 return factory.updateClassExpression(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
-                    nodesVisitor(node.modifiers, visitor, isModifier),
+                    nodesVisitor(node.modifiers, visitor, isModifierLike),
                     nodeVisitor(node.name, visitor, isIdentifier),
                     nodesVisitor(node.typeParameters, visitor, isTypeParameterDeclaration),
                     nodesVisitor(node.heritageClauses, visitor, isHeritageClause),
@@ -992,7 +1022,6 @@ namespace ts {
             case SyntaxKind.FunctionDeclaration:
                 Debug.type<FunctionDeclaration>(node);
                 return factory.updateFunctionDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     nodeVisitor(node.asteriskToken, tokenVisitor, isAsteriskToken),
                     nodeVisitor(node.name, visitor, isIdentifier),
@@ -1004,8 +1033,7 @@ namespace ts {
             case SyntaxKind.ClassDeclaration:
                 Debug.type<ClassDeclaration>(node);
                 return factory.updateClassDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
-                    nodesVisitor(node.modifiers, visitor, isModifier),
+                    nodesVisitor(node.modifiers, visitor, isModifierLike),
                     nodeVisitor(node.name, visitor, isIdentifier),
                     nodesVisitor(node.typeParameters, visitor, isTypeParameterDeclaration),
                     nodesVisitor(node.heritageClauses, visitor, isHeritageClause),
@@ -1014,7 +1042,6 @@ namespace ts {
             case SyntaxKind.InterfaceDeclaration:
                 Debug.type<InterfaceDeclaration>(node);
                 return factory.updateInterfaceDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     nodeVisitor(node.name, visitor, isIdentifier),
                     nodesVisitor(node.typeParameters, visitor, isTypeParameterDeclaration),
@@ -1024,7 +1051,6 @@ namespace ts {
             case SyntaxKind.TypeAliasDeclaration:
                 Debug.type<TypeAliasDeclaration>(node);
                 return factory.updateTypeAliasDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     nodeVisitor(node.name, visitor, isIdentifier),
                     nodesVisitor(node.typeParameters, visitor, isTypeParameterDeclaration),
@@ -1033,7 +1059,6 @@ namespace ts {
             case SyntaxKind.EnumDeclaration:
                 Debug.type<EnumDeclaration>(node);
                 return factory.updateEnumDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     nodeVisitor(node.name, visitor, isIdentifier),
                     nodesVisitor(node.members, visitor, isEnumMember));
@@ -1041,7 +1066,6 @@ namespace ts {
             case SyntaxKind.ModuleDeclaration:
                 Debug.type<ModuleDeclaration>(node);
                 return factory.updateModuleDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     nodeVisitor(node.name, visitor, isModuleName),
                     nodeVisitor(node.body, visitor, isModuleBody));
@@ -1064,7 +1088,6 @@ namespace ts {
             case SyntaxKind.ImportEqualsDeclaration:
                 Debug.type<ImportEqualsDeclaration>(node);
                 return factory.updateImportEqualsDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     node.isTypeOnly,
                     nodeVisitor(node.name, visitor, isIdentifier),
@@ -1073,10 +1096,22 @@ namespace ts {
             case SyntaxKind.ImportDeclaration:
                 Debug.type<ImportDeclaration>(node);
                 return factory.updateImportDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     nodeVisitor(node.importClause, visitor, isImportClause),
-                    nodeVisitor(node.moduleSpecifier, visitor, isExpression));
+                    nodeVisitor(node.moduleSpecifier, visitor, isExpression),
+                    nodeVisitor(node.assertClause, visitor, isAssertClause));
+
+            case SyntaxKind.AssertClause:
+                Debug.type<AssertClause>(node);
+                return factory.updateAssertClause(node,
+                    nodesVisitor(node.elements, visitor, isAssertEntry),
+                    node.multiLine);
+
+            case SyntaxKind.AssertEntry:
+                Debug.type<AssertEntry>(node);
+                return factory.updateAssertEntry(node,
+                    nodeVisitor(node.name, visitor, isAssertionKey),
+                    nodeVisitor(node.value, visitor, isExpressionNode));
 
             case SyntaxKind.ImportClause:
                 Debug.type<ImportClause>(node);
@@ -1103,24 +1138,24 @@ namespace ts {
             case SyntaxKind.ImportSpecifier:
                 Debug.type<ImportSpecifier>(node);
                 return factory.updateImportSpecifier(node,
+                    node.isTypeOnly,
                     nodeVisitor(node.propertyName, visitor, isIdentifier),
                     nodeVisitor(node.name, visitor, isIdentifier));
 
             case SyntaxKind.ExportAssignment:
                 Debug.type<ExportAssignment>(node);
                 return factory.updateExportAssignment(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     nodeVisitor(node.expression, visitor, isExpression));
 
             case SyntaxKind.ExportDeclaration:
                 Debug.type<ExportDeclaration>(node);
                 return factory.updateExportDeclaration(node,
-                    nodesVisitor(node.decorators, visitor, isDecorator),
                     nodesVisitor(node.modifiers, visitor, isModifier),
                     node.isTypeOnly,
                     nodeVisitor(node.exportClause, visitor, isNamedExportBindings),
-                    nodeVisitor(node.moduleSpecifier, visitor, isExpression));
+                    nodeVisitor(node.moduleSpecifier, visitor, isExpression),
+                    nodeVisitor(node.assertClause, visitor, isAssertClause));
 
             case SyntaxKind.NamedExports:
                 Debug.type<NamedExports>(node);
@@ -1130,6 +1165,7 @@ namespace ts {
             case SyntaxKind.ExportSpecifier:
                 Debug.type<ExportSpecifier>(node);
                 return factory.updateExportSpecifier(node,
+                    node.isTypeOnly,
                     nodeVisitor(node.propertyName, visitor, isIdentifier),
                     nodeVisitor(node.name, visitor, isIdentifier));
 
