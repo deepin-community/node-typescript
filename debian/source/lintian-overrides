@@ -8,8 +8,22 @@ source-is-missing [lib/tsserverlibrary.js]
 source-is-missing [lib/typescript.js]
 source-is-missing [lib/typescriptServices.js]
 source-is-missing [lib/typingsInstaller.js]
-very-long-line-length-in-source-file [lib/*]
 
 # Test data
-source-is-missing [tests/*]
-very-long-line-length-in-source-file [tests/*]
+very-long-line-length-in-source-file *tests/*
+source-contains-prebuilt-javascript-object *tests/*
+
+# Documentations
+very-long-line-length-in-source-file *.txt*
+very-long-line-length-in-source-file *.md*
+
+# Manual
+maintainer-manual-page *debian/tsc.1*
+maintainer-manual-page *debian/tsserver.1*
+very-long-line-length-in-source-file *debian/tsserver.1*
+
+
+very-long-line-length-in-source-file *src/compiler/watchPublic.ts*
+very-long-line-length-in-source-file *src/compiler/scanner.ts*
+very-long-line-length-in-source-file *lib/*
+source-contains-prebuilt-javascript-object *lib/*
