@@ -1,3 +1,22 @@
+node-typescript (4.9.5+ds1-2) unstable; urgency=medium
+
+  * Team upload
+  * Upload to unstable
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 07 Nov 2024 19:56:39 +0000
+
+node-typescript (4.9.5+ds1-1) experimental; urgency=medium
+
+  * Team Upload
+  * Update d/watch to use Github API
+  * New upstream version 4.9.5+ds1
+  * Bump Standards-Version to 4.6.2 (no changes needed)
+  * Add tsserver manpage
+  * Update lintian overrides
+  * Update d/* copyright
+
+ -- Ananthu C V <weepingclown@disroot.org>  Tue, 24 Oct 2023 15:32:00 +0530
+
 node-typescript (4.8.4+ds1-2) unstable; urgency=medium
 
   * Prepare for upload to unstable.
