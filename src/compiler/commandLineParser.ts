@@ -67,6 +67,7 @@ namespace ts {
         ["es2019.object", "lib.es2019.object.d.ts"],
         ["es2019.string", "lib.es2019.string.d.ts"],
         ["es2019.symbol", "lib.es2019.symbol.d.ts"],
+        ["es2019.intl", "lib.es2019.intl.d.ts"],
         ["es2020.bigint", "lib.es2020.bigint.d.ts"],
         ["es2020.date", "lib.es2020.date.d.ts"],
         ["es2020.promise", "lib.es2020.promise.d.ts"],
@@ -191,6 +192,7 @@ namespace ts {
             shortName: "h",
             type: "boolean",
             showInSimplifiedHelpView: true,
+            isCommandLineOnly: true,
             category: Diagnostics.Command_line_Options,
             description: Diagnostics.Print_this_message,
             defaultValueDescription: false,
@@ -199,6 +201,8 @@ namespace ts {
             name: "help",
             shortName: "?",
             type: "boolean",
+            isCommandLineOnly: true,
+            category: Diagnostics.Command_line_Options,
             defaultValueDescription: false,
         },
         {
@@ -1351,7 +1355,12 @@ namespace ts {
             description: Diagnostics.Control_what_method_is_used_to_detect_module_format_JS_files,
             category: Diagnostics.Language_and_Environment,
             defaultValueDescription: Diagnostics.auto_Colon_Treat_files_with_imports_exports_import_meta_jsx_with_jsx_Colon_react_jsx_or_esm_format_with_module_Colon_node16_as_modules,
-        }
+        },
+        {
+            name: "ignoreDeprecations",
+            type: "string",
+            defaultValueDescription: undefined,
+        },
     ];
 
     /* @internal */
@@ -2578,12 +2587,21 @@ namespace ts {
 
         function writeConfigurations() {
             // Filter applicable options to place in the file
-            const categorizedOptions = createMultiMap<CommandLineOption>();
+            const categorizedOptions = new Map<DiagnosticMessage, CommandLineOption[]>();
+            // Set allowed categories in order
+            categorizedOptions.set(Diagnostics.Projects, []);
+            categorizedOptions.set(Diagnostics.Language_and_Environment, []);
+            categorizedOptions.set(Diagnostics.Modules, []);
+            categorizedOptions.set(Diagnostics.JavaScript_Support, []);
+            categorizedOptions.set(Diagnostics.Emit, []);
+            categorizedOptions.set(Diagnostics.Interop_Constraints, []);
+            categorizedOptions.set(Diagnostics.Type_Checking, []);
+            categorizedOptions.set(Diagnostics.Completeness, []);
             for (const option of optionDeclarations) {
-                const { category } = option;
-
                 if (isAllowedOptionForOutput(option)) {
-                    categorizedOptions.add(getLocaleSpecificMessage(category!), option);
+                    let listForCategory = categorizedOptions.get(option.category!);
+                    if (!listForCategory) categorizedOptions.set(option.category!, listForCategory = []);
+                    listForCategory.push(option);
                 }
             }
 
@@ -2595,7 +2613,7 @@ namespace ts {
                 if (entries.length !== 0) {
                     entries.push({ value: "" });
                 }
-                entries.push({ value: `/* ${category} */` });
+                entries.push({ value: `/* ${getLocaleSpecificMessage(category)} */` });
                 for (const option of options) {
                     let optionName;
                     if (compilerOptionsMap.has(option.name)) {
@@ -3705,7 +3723,7 @@ namespace ts {
     export function convertCompilerOptionsForTelemetry(opts: CompilerOptions): CompilerOptions {
         const out: CompilerOptions = {};
         for (const key in opts) {
-            if (opts.hasOwnProperty(key)) {
+            if (hasProperty(opts, key)) {
                 const type = getOptionFromName(key);
                 if (type !== undefined) { // Ignore unknown options
                     out[key] = getOptionValueWithEmptyStrings(opts[key], type);

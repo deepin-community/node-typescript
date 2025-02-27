@@ -15,7 +15,8 @@ Copyright: 2016-2018 Microsoft Corp.
 License: Apache-2.0
 
 Files: debian/*
-Copyright: 2016-2018 Julien Puydt <jpuydt@debian.org>
+Copyright: 2016-2018 Julien Puydt <jpuydt@debian.org>,
+	   2023 Ananthu C V <weepingclown@disroot.org>
 License: Apache-2.0
 
 License: Apache-2.0

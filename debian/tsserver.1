@@ -1,0 +1,212 @@
+.TH "TSSERVER" "1" "October 2023"
+.SH "NAME"
+\fBtsserver \- TypeScript standalone server\fR
+.P
+The TypeScript standalone server (aka \fBtsserver\fP) is a node executable that encapsulates the TypeScript compiler and language services, and exposes them through a JSON protocol\. \fBtsserver\fP is well suited for editors and IDE support\.
+.TH "TSSERVER" "1" "October 2023"
+.SH "NAME"
+\fBProtocol\fR
+.SH Definition
+.P
+The server communication protocol is defined in the \fBts\.server\.protocol\fP namespace, declared in 
+.UR https://github.com/microsoft/TypeScript/blob/main/lib/tsserverlibrary.d.ts
+.I `tsserverlibrary.d.ts`
+.UE .
+.P
+The executable can be found in lib folder under the typescript package\.
+.RS 2
+.nf
+npm install \-\-save typescript
+ls node_modules\\typescript\\lib\\tsserver\.js
+.fi
+.RE
+.SH Message format
+.P
+\fBtsserver\fP listens on \fBstdin\fP and writes messages back to \fBstdout\fP\|\.
+.P
+Requests are JSON following the protocol definition\. Here is an example request to open a file \fBc:/DefinitelyTyped/gregorian\-calendar/index\.d\.ts\fP:
+.RS 2
+.nf
+{"seq":1,"type":"request","command":"open","arguments":{"file":"c:/DefinitelyTyped/gregorian\-calendar/index\.d\.ts"}}
+.fi
+.RE
+.P
+Responses are augmented JSON format\. The Message starts with a header with the content length followed by a line separator (\fB\\r\\n\fP) followed by the response body as a JSON string:
+.P
+Here is an example of a response for a \fBquickinfo\fP command:
+.RS 2
+.nf
+Content\-Length: 116
+
+{"seq":0,"type":"response","command":"quickinfo","request_seq":2,"success":false,"message":"No content available\."}
+.fi
+.RE
+.P
+Similarly events have the same format as a response\.
+.P
+Here is an example event for error message:
+.RS 2
+.nf
+Content\-Length: 261
+
+{"seq":0,"type":"event","event":"semanticDiag","body":{"file":"c:/DefinitelyTyped/gregorian\-calendar/index\.d\.ts","diagnostics":[{"start":{"line":264,"offset":44},"end":{"line":264,"offset":50},"text":"Binding element 'Object'
+implicitly has an 'any' type\."}]}}
+.fi
+.RE
+.SH Commands
+.P
+\fBtsserver\fP supports a set of commands\. The full list of commands supported by the server can be found under 
+.UR https://github.com/microsoft/TypeScript/blob/main/src/server/protocol.ts
+.I ts.server.protocol.CommandTypes
+.UE .
+.P
+Each command is associated with a request and a response interface\. For instance command \fB"completions"\fP corresponds to request interface \fBCompletionsRequest\fP, and response interface defined in \fBCompletionsResponse\fP\|\.
+.TH "TSSERVER" "1" "October 2023"
+.SH "NAME"
+\fB\fRSample implementations
+.SH Sublime text plugin
+.P
+.UR https://github.com/Microsoft/TypeScript-Sublime-Plugin
+.I TypeScript-Sublime-Plugin
+.UE
+is a Sublime text plugin written in Python that uses \fBtsserver\fP\|\.
+.SH Visual Studio Code
+.P
+.UR https://code.visualstudio.com/
+.I VS Code
+.UE '
+s 
+.UR https://github.com/microsoft/vscode/tree/master/extensions/typescript-language-features
+.I TypeScript support
+.UE
+is implemented in TypeScript using \fBtsserver\fP\|\.
+.SH Tide
+.P
+.UR https://github.com/ananthakumaran/tide
+.I Tide
+.UE
+is an elisp implementation for emacs plugin using \fBtsserver\fP
+.SH Neovim
+.P
+.UR https://github.com/mhartington/nvim-typescript
+.I nvim-typescript
+.UE
+is a neovim plugin using \fBtsserver\fP
+.TH "TSSERVER" "1" "October 2023"
+.SH "NAME"
+\fB\fRAdvanced topics
+.SH Logging
+.P
+\fBtsserver\fP logging is configured through the \fBTSS_LOG\fP environment variable\.
+.P
+\fBTSS_LOG\fP can have the following format:
+.RS 2
+.nf
+[\-level <terse | normal | requestTime | verbose>] 
+[\-traceToConsole <true | false>] 
+[\-logToFile <true | false>] 
+[\-file <log file path>]
+.fi
+.RE
+.P
+Note: \fBfile\fP defaults to \fB__dirname\\\.log<PID>\fP if not specified
+.P
+\fBExample\fR: \fBset TSS_LOG=\-level verbose \-file c:\\tmp\\tsserver\.log\fP
+.SH Cancellation
+.P
+\fBtsserver\fP on startup will try to load module \fB\|\./cancellationToken\fP from the containing directory\. This module should export a factory function that accepts a list of command line arguments and returns 
+.UR https://github.com/Microsoft/TypeScript/blob/master/src/services/types.ts#L119-L121
+.I HostCancellationToken
+.UE .
+\fBtsserver\fP will use this token to check if in\-flight operation should be cancelled\.
+.P
+NOTE: This token will be used for all operations so if one operation is cancelled and cancellation was reported through the token then when another operation is started \- token should be reset into the non\-cancelled state\.
+.P
+Default implementation of the cancellation token uses the presence of named pipes as a way to signal cancellation\.
+
+.RS 1
+.IP \(bu 2
+Before spawning the server, the client generates a unique name\. This name is passed to the server as a \fBcancellationPipeName\fP command line argument\.
+.IP \(bu 2
+If some operation on the client side should be cancelled \- client opens a named pipe with a name generated on step 1\. Nothing needs to be written in the pipe \- default cancellation token will interpret the presence of named pipe as a cancellation request\.
+.IP \(bu 2
+After receiving acknowledgment from the server, the client closes the pipe so it can use the same pipe name for the next operation\.
+
+.RE
+.P
+Server can split execution of some commands (like \fBgeterr\fP) in a few steps that will be executed with a delay\. This allows it to react on user actions more promptly and not run heavy computations if their results will not be used\. However, it introduces a tricky moment in support of cancellations\. By allowing request to be suspended and resumed later we break the invariant that was the cornerstone for default implementation of cancellation\. Namely now requests can overlap so one pipe name can no longer be used because client have no reason what request is currently executing and will be cancelled\. To deal with this issue \fBtsserver\fP allows pipe name to be computed dynamically based on current request id\. To enable this the client need to provide a value that ends with \fB*\fP as the \fB\-\-cancellationPipeName\fP argument\. If provided cancellation pipe name ends with \fB*\fP then default implementation of cancellation token will build expected pipe name as \fB<cancellationPipeName argument without *><currentRequestId>\fP\|\. This will allow client to signal any request it thinks is in flight by creating a named pipe with a proper name\. Note that server will always send \fBrequestCompleted\fP message to denote that asynchronous request was completed (either by running to completion or via cancellation) so the client can close named pipe once this message is received\.
+.SH Commandline options
+.TS OPTIONS
+l l.
+.TP
+\fB\-\-cancellationPipeName\fP
+Name of the pipe used as a request cancellation semaphore\. See \fICancellation\fR for more information\.
+.TP
+\fB\-\-syntaxOnly\fP
+A streamlined mode for when the server will only be answering syntactic queries\.
+.TP
+\fB\-\-suppressDiagnosticEvents\fP
+Opt out of receiving events when new diagnostics are discovered (i\.e\. must request them explicitly)\.
+.TP
+\fB\-\-eventPort\fP
+Port used for receiving events\. If non is specified events are sent to stdout\.
+.TP
+\fB\-\-useSingleInferredProject\fP
+Put all open \.ts and \.js files that do not have a \.tsconfig file in a common project
+.TP
+\fB\-\-noGetErrOnBackgroundUpdate\fP
+Opt out of starting \fBgetErr\fP on \fBprojectsUpdatedInBackground\fP event
+.TP
+\fB\-\-locale\fP
+The locale to use to show error messages, e\.g\. en\-us\.
+.br
+Possible values are: English (US): \fBen\fP, Czech: \fBcs\fP, German: \fBde\fP, Spanish: \fBes\fP, French: \fBfr\fP, Italian: \fBit\fP, Japanese: \fBja\fP, Korean: \fBko\fP, Polish: \fBpl\fP,
+Portuguese(Brazil): \fBpt\-BR\fP, Russian: \fBru\fP, Turkish: \fBtr\fP, Simplified Chinese: \fBzh\-CN\fP, Traditional Chinese: \fBzh\-TW\fP
+.TH "TSSERVER" "1" "October 2023"
+.SH "NAME"
+\fB\fRProject System
+.P
+There are three kinds of projects:
+.SH Configured Project
+.P
+Configured projects are defined by a configuration file, which can be either \fBtsconfig\.json\fP file or a \fBjsconfig\.json\fP file\.
+.br
+That configuration file marks the project root path and defines what files to include\.
+.br
+The configuration file also provide the compiler options to be used for this project\.
+.P
+You can find more information in the 
+.UR http://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+.I tsconfig.json documentation
+.UE .
+.SH External Project
+.P
+An external project represents host\-specific project formats that TS is not aware of\.
+.br
+The host is responsible for supplying the list of files in this project and compiler options to use\.
+.P
+Currently VS is the only consumer of this type of project, to model the TS/JS files in a \.csproj project\.
+.SH Inferred Project
+.P
+Inferred projects are what is used to represent a loose TS/JS file\.
+.br
+If a file does not have a configuration file (\fBtsconfig\.json\fP or \fBjsconfig\.json\fP) \fBin the current directory or any parent directories\fR, the server will create an inferred project for it\.
+.P
+The server will include the loose file, then includes all other files included by triple slash references and module imports from the original file transitively\.
+.P
+Compilation options will use the default options for inferred projects\.
+.br
+The host can set the defaults of an inferred project\.
+.SH Relationship Among These Projects
+.P
+In general, the relationship can be summarized as \fBconfigured projects > external projects > inferred projects\fP\|\.
+.P
+For example, if \fBfile1\.ts\fP belongs to an inferred project, but later a new \fBtsconfig\.json\fP also includes this file\.
+.br
+Then after the \fBtsconfig\.json\fP file is found, \fBfile1\.ts\fP will no longer belong to the previous inferred project but the newly created configured project instead\.
+.br
+If \fBfile1\.ts\fP used to be the root file of the inferred project, that inferred project will now be destroyed; otherwise it will remain with one fewer file\.
+.P
+For another example, if a \fBtsconfig\.json\fP file is created to include some files used to belong to an external project (let's call it EP1), then in the current implementation EP1 will be destroyed, all its files either go to the new configured project or will belong to a new inferred project the next time it is opened\.
+.P
+One thing to notice is that one file can belong to multiple projects of the same kind at the same time\. E\.g\., a file can be included by multiple configured projects / inferred projects / external projects\.
